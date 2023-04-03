@@ -40,3 +40,34 @@ body {
   font-size: 1.2rem;
   color: var(--mainYellow);
 }
+
+.slider-container {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+
+}
+.slider-overlay.show{
+  animation: fadeIn 3s;
+
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-30%,-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%,-50%);
+  }
+}
