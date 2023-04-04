@@ -25,7 +25,7 @@ export default class Detail extends Component {
                 <div className="col-10 mx-auto col-md-6 my-3">
                   <h2>model: {title}</h2>
                   <h4 className="text-title  text-muted mt-3 mb-2">
-                    made by: <span className="">{company}</span>
+                    made by: <span>{company}</span>
                   </h4>
                   <h4 className="text-blue">
                     <strong>
@@ -37,9 +37,8 @@ export default class Detail extends Component {
                     Thông tin về sản phẩm:
                   </p>
                   <p className="text-muted lead">{info}</p>
-                  {/* buttons */}
                   <div>
-                    <Link to="/">
+                    <Link to="/product">
                       <ButtonContainer>Quay lại cửa hàng</ButtonContainer>
                     </Link>
                     <ButtonContainer

@@ -27,7 +27,7 @@ export default class Product extends Component {
               </div>
             )}
           </ProductConsumer>
-          {/* card footer */}
+          
           <div className="card-footer d-flex justify-content-between">
             <p className="align-seft-center mb-0">
               {title}

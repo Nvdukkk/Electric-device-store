@@ -4,7 +4,7 @@ import { ProductConsumer } from "../context";
 import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
 
-export default class Modal extends Component {
+export default class ProductModal extends Component {
   render() {
     return (
       <ProductConsumer>
@@ -25,7 +25,7 @@ export default class Modal extends Component {
                       <img src={img} className="img-fluid" alt="product" />
                       <h5>{title}</h5>
                       <h5 className="text-muted">Giá : ${price}</h5>
-                      <Link to="/">
+                      <Link to="/product">
                         <ButtonContainer onClick={() => closeModal()}>
                           Quay lại cửa hàng
                         </ButtonContainer>
