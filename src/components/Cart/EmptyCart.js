@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function EmptyCart() {
   return (
@@ -7,5 +7,5 @@ export default function EmptyCart() {
         <h1>Giỏ hàng của bạn đang trống</h1>
       </div>
     </div>
-  )
+  );
 }

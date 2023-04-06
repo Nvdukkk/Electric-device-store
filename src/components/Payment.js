@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 function Payment() {
@@ -5,10 +6,15 @@ function Payment() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({});
 
   const onSubmit = (data) => {
-    console.log(data);
+    axios.post(
+      "https://sheet.best/api/sheets/eb5ec9af-83b0-431b-8f6d-75ba9973d95a",
+      data
+    );
+    reset();
   };
   return (
     <div>
