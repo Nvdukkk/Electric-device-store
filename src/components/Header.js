@@ -13,7 +13,7 @@ export default class Header extends Component {
             src={logo}
             alt="logo"
             className="navbar-brand"
-            style={{ maxHeight: "60px"}}
+            style={{ maxHeight: "60px" }}
           />
         </Link>
         <div className="ml-auto">
@@ -27,10 +27,9 @@ export default class Header extends Component {
           </Link>
           <Link to="/cart">
             <ButtonContainer>
-              <span className="mr-2">
-                <i className="fas fa-cart-plus"></i>
+              <span className="">
+                <i className="fab fa-shopify"></i>
               </span>
-              Giỏ hàng
             </ButtonContainer>
           </Link>
         </div>

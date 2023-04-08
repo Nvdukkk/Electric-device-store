@@ -30,19 +30,36 @@ function SliderImage() {
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-    
+
   return (
-      <div
-        className="slider-container"
-        style={{ backgroundImage: backgrounds[index] }}
-      >
-        <div className={`slider-overlay ${show ? "show" : ""}`}>
-          <h1>{h1Text[index]}</h1>
-          <h6 className="mt-4">{content[index]}</h6>
-          <Link to="/product" className="btn btn-outline-primary mt-5">ĐẶT HÀNG NGAY</Link>
-        </div>
+    <div
+      className="slider-container"
+      style={{ backgroundImage: backgrounds[index] }}
+    >
+      <div className={`slider-overlay ${show ? "show" : ""}`}>
+        <h1
+          style={{
+            fontSize: "50px",
+            fontWeight: "bold",
+          }}
+        >
+          {h1Text[index]}
+        </h1>
+        <h6 className="mt-4">{content[index]}</h6>
+        <Link
+          to="/product"
+          className="btn mt-5"
+          style={{
+            borderRadius: "15px",
+            backgroundColor: "#fff",
+            color: "var(--mainBlue)",
+            fontWeight: "600",
+          }}
+        >
+          ĐẶT HÀNG NGAY
+        </Link>
       </div>
-    
+    </div>
   );
 }
 

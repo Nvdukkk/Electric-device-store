@@ -1,19 +1,19 @@
 export const GUEST_LIST = [
   {
     id: 1,
-    src: "image/logo_bocongan.png",
+    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
   },
   {
     id: 2,
-    src: "image/logo_bachkhoa.png",
+    src: "https://maludesign.vn/wp-content/uploads/2021/11/logo-cong-ty-xay-dung-6_1586786415-800x800.png",
   },
   {
     id: 3,
-    src: "image/logo_bgd.png",
+    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
   },
   {
     id: 4,
-    src: "image/logo_trandangninh.png",
+    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
   },
 ];
 
@@ -24,7 +24,7 @@ export const GUEST_REVIEW = [
     name: "Bà: Nguyễn Thị Mơ",
     position: "Giám đốc CA Hà Nội",
     review:
-      "“Giải pháp của Thuanthanhtech mang tới một trải nghiệm học tập trực tuyến tuyệt vời cho người dạy và người học. Giáo viên trở về đúng nghĩa là người truyền cảm hứng và dẫn dắt, hỗ trợ sinh viên.”",
+      "Sản phẩm của Thuận An rất tốt, tôi rất yên tâm tin dùng, uy tín chất lượng!",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ export const GUEST_REVIEW = [
     name: "Bà: Hoàng Thúy Nga",
     position: "Trưởng phòng tài chính ĐH Bách Khoa",
     review:
-      "“Thuanthanhtech có được một Hệ thống công nghệ toàn diện, trọn gói, học liệu phong phú hấp dẫn có tính tương tác cao.”",
+      "Sản phẩm của Thuận An rất tốt, tôi rất yên tâm tin dùng, uy tín chất lượng!",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ export const GUEST_REVIEW = [
     name: "Ông: Vũ Minh Đức",
     position: "Hiệu trưởng trường THPT Trần Đăng Ninh",
     review:
-      "“Giải pháp của Thuanthanhtech phù hợp với xu thế chuyển đổi số hiện nay: phát triển học liệu mở, học tập đa tương tác, đào tạo cá thể hoá, đặc biệt quản lý được toàn bộ hành trình sinh viên.”",
+      "Sản phẩm của Thuận An rất tốt, tôi rất yên tâm tin dùng, uy tín chất lượng!",
   },
   {
     id: 4,
@@ -48,6 +48,6 @@ export const GUEST_REVIEW = [
     name: "Bà: Nguyễn Thu Hương",
     position: "Trưởng phòng truyền thông VKX",
     review:
-      "“Giải pháp của Thuanthanhtech áp dụng những công nghệ tiên tiến bậc nhất hiện nay. Đó sẽ là xu hướng của giáo dục trong tương lai.”",
+      "Sản phẩm của Thuận An rất tốt, tôi rất yên tâm tin dùng, uy tín chất lượng!",
   },
 ];

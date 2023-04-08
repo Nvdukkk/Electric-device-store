@@ -2,7 +2,12 @@ import React from "react";
 
 export default function CartColumns() {
   return (
-    <div className="container-fluid text-center d-none d-lg-block">
+    <div
+      className="container-fluid text-center d-none d-lg-block "
+      style={{
+        marginTop: "50px",
+      }}
+    >
       <div className="row">
         <div className="col-10 mx-auto col-lg-2">
           <p className="">Hình ảnh</p>
