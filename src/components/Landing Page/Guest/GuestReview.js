@@ -1,6 +1,5 @@
 import { GUEST_REVIEW } from "./constant";
-import React, { useEffect, useRef, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 
 const starImgSrc = "/icon/star.svg";
 const starImgx5 = Array.from({ length: 5 }, (_, index) => (
@@ -8,19 +7,7 @@ const starImgx5 = Array.from({ length: 5 }, (_, index) => (
 ));
 
 function GuestReview() {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef();
-  const { inView } = useInView({
-    threshold: 0.5,
-    rootMargin: "0px",
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
+  
   return (
     <div
       style={{
@@ -43,9 +30,8 @@ function GuestReview() {
         <div className="row ">
           {GUEST_REVIEW.map(({ id, classname, src, name, position, review }) => (
             <div
-              className={`col medium-6 small-12 large-3 ${isVisible ? "" : classname}`}
+              className={`col medium-6 small-12 large-3`}
               key={id}
-              ref={ref}
             >
               <div
                 className="d-flex flex-column align-items-center pt-5 pb-3 px-4 hover-up"

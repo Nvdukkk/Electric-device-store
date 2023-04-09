@@ -9,16 +9,17 @@ function Payment() {
     formState: { errors },
     reset,
   } = useForm({});
-  let cartData = {};
+
+  let cartData = {title: '', count: ''};
+
   const onSubmit = (data) => {
     const mergeData = Object.assign({}, data, cartData)
-    console.log(mergeData);
-    //merge cartData object
+    
     axios.post(
       "https://sheet.best/api/sheets/eb5ec9af-83b0-431b-8f6d-75ba9973d95a",
       mergeData
     );
-
+    alert("Đặt hàng thành công")
     reset();
   };
   return (
@@ -27,8 +28,15 @@ function Payment() {
         const { cart } = value;
         
         for (let i = 0; i < cart.length; i++) {
-          cartData["object" + (i+1)] = cart[i]
+          cartData.title += cart[i].title
+          cartData.count += cart[i].count
+
+          if (i < cart.length - 1) {
+            cartData.title += ' ; '
+            cartData.count += ' ; '
+          }
         }
+        console.log(cartData);
         return (
           <div>
             <h3>Đặt hàng</h3>
