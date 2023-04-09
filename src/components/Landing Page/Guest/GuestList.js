@@ -1,7 +1,31 @@
 import { GUEST_LIST } from "./constant";
 import React from "react";
-
+import Slider from "react-slick";
 function GuestList() {
+  const settingSlider = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div
       className="text-center mt-5 px-5"
@@ -27,29 +51,17 @@ function GuestList() {
         quốc tế. Tất cả những đối tác từ trong nước tới nước ngoài đều có những
         phản hồi tích cực về giải pháp và phần mềm của chúng tôi.
       </p>
-      <div className="slider row" style={{ margin: "80px 0 0 0" }}>
+      <Slider {...settingSlider}>
         {GUEST_LIST.map(({ id, src }) => (
-          <div className="col medium-6 small-12 large-3">
-            <div
-              style={{
-                width: "100%",
-                padding: "20px",
-                height: "300px",
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <img
-                key={id}
-                src={src}
-                alt="guest-list"
-                style={{ width: "100%" }}
-              />
-            </div>
+          <div key={id}>
+            <img
+              src={src}
+              alt="guest-list"
+              style={{ width: "100%" }}
+            />
           </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 }
