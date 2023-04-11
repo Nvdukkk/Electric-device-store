@@ -10,6 +10,7 @@ import ProductModal from "./components/Product/ProductModal";
 import LandingPage from "./components/Landing Page/LandingPage";
 import Header from "./components/Header";
 import Payment from "./components/Payment";
+import ComingSoon from "./components/ComingSoon";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/details" component={Details} />
         <Route path="/cart" component={Cart} />
         <Route path="/pay" component={Payment} />
+        <Route path="/comingsoon" component={ComingSoon} />
         <Route component={Default} />
       </Switch>
       <ProductModal />

@@ -1,11 +1,16 @@
 import React from "react";
 import { ButtonContainer } from "../Button";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
     <div className="bg-light row gx-0 align-items-center" id="aboutus">
       <div className="col-lg-6 p-0 aboutus-img">
-        <img src="/image/banner-slide-2.jpg" alt="about us img" className="w-100 h-100"></img>
+        <img
+          src="/image/banner-slide-2.jpg"
+          alt="about us img"
+          className="w-100 h-100"
+        ></img>
       </div>
       <div className="col-lg-6 p-0">
         <div className="aboutus-box bg-white p-4 p-lg-5 rounded">
@@ -21,7 +26,9 @@ function AboutUs() {
             tốt nhất nằm đáp những sự kỳ vọng của khách hàng, giúp khách hàng
             đạt được mục tiêu trong chiến lược kinh doanh lâu dài của họ.
           </p>
-          <ButtonContainer>Xem thêm</ButtonContainer>
+          <ButtonContainer>
+            <Link to="/comingsoon">Xem thêm</Link>
+          </ButtonContainer>
         </div>
       </div>
     </div>

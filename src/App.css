@@ -21,6 +21,10 @@ body {
   font-family: "Montserrat", sans-serif !important;
   font-size: none;
 }
+a{
+  text-decoration: none;
+  background-color: transparent;
+}
 
 .text-title {
   letter-spacing: 0.3rem;
@@ -75,12 +79,12 @@ body {
   font-weight: bold;
 }
 
-.guest-box-list{
+.guest-box-list {
   padding: 30px 40px;
-  background-color:white;
+  background-color: white;
 }
 
-.guest-box-list img{
+.guest-box-list img {
   width: 150px;
   height: 150px;
 }
@@ -122,6 +126,25 @@ body {
   transform: scale(1.05);
 }
 
+//comingsoon css
+
+.comingsoon {
+  background: url('/image/cover.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+.comingsoon_body{
+  margin: 100px 0;
+}
+.comingsoon_body h1{
+  font-size:56px;
+  margin-bottom: 80px
+}
+
+.comingsoon_body p{
+  font-size:20px;
+  margin: 0 auto 3rem
+}
 /* .hover-up {
   transition: all ease 0.3s;
 }
@@ -194,3 +217,6 @@ body {
     opacity: 1;
   }
 }
+
+
+
