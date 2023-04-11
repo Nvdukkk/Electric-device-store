@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
 function SliderImage() {
-
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const backgrounds = [
@@ -51,10 +50,10 @@ function SliderImage() {
           to="/product"
           className="btn mt-5"
           style={{
-            borderRadius: "15px",
             backgroundColor: "#fff",
-            color: "var(--mainBlue)",
+            color: "#000",
             fontWeight: "600",
+            borderRadius: "0px",
           }}
         >
           ĐẶT HÀNG NGAY

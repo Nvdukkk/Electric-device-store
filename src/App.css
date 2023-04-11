@@ -38,12 +38,16 @@ a {
   color: var(--mainBlue);
 }
 
+.btn {
+  border-radius: 0px !important;
+}
+
 .btn-black {
   background: transparent;
   font-size: 0.8rem !important;
   color: var(--mainDark);
   border-radius: 0 !important;
-  border: 0.1rem solid var(--mainDark) !important;
+  /* border: 0.1rem solid var(--mainDark) !important; */
 }
 
 .btn-black:hover {
@@ -53,12 +57,11 @@ a {
 
 .cart-icon {
   cursor: pointer;
-  font-size: 1.2rem;
-  color: var(--mainYellow);
+  font-size: 20px;
 }
 
 .slider-container {
-  height: 500px;
+  height: 800px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -93,44 +96,52 @@ a {
   height: 150px;
 }
 
+#aboutus {
+  margin: 150px 0;
+}
+
+.aboutus-img {
+  transform: translateX(50px);
+}
+
 .aboutus-box {
   --margin: 6rem;
-  position: relative;
-  margin-left: calc(var(--margin) * -1);
-  margin-right: var(--margin);
-  z-index: 200;
+  transform: translateX(-50px);
+  border: 10px solid #fff;
 }
+
 .box {
   background: #ffffff;
   text-align: center;
   border: 1px solid rgba(97, 119, 152, 0.2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-  :first-child {
-    padding: 20px 0;
-  }
-  :last-child {
-    padding: 0 26px;
-  }
+.box:first-child {
+  padding: 20px 0;
+}
+
+.box:last-child {
+  padding: 0 26px;
 }
 
 .card {
   height: 100%;
   justify-content: space-between;
-  birder-radius: 15px;
+  border-radius: 0;
 }
 
 .card-visit {
   transition: all ease 0.3s;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  border-radius: 0;
 }
 
 .card-visit:hover {
   transform: scale(1.05);
 }
 
-//comingsoon css
+/* coming soon */
 
 .comingsoon {
   background: url("/image/cover.jpg") no-repeat center center fixed;
@@ -150,7 +161,7 @@ a {
   margin: 0 auto 3rem;
 }
 
-// 404 css
+/* 404 css */
 
 .background_404 {
   position: absolute;
@@ -281,8 +292,15 @@ a {
 }
 
 .slick-arrow {
-  background-color: red !important;
+  /* background-color: red !important; */
 }
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000 !important;
+  font-size: 40px !important;
+}
+
 @keyframes slideInUp {
   0% {
     opacity: 0;
@@ -339,5 +357,23 @@ a {
   }
   100% {
     text-shadow: 0 0 1rem #fefefe;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  #aboutus {
+    margin: 100px 0;
+  }
+
+  .aboutus-img {
+    transform: translateY(50px);
+  }
+
+  .aboutus-box {
+    transform: translateY(-50px);
+    width: 80%;
+    margin: 0 auto;
   }
 }
