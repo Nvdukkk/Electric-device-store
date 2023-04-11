@@ -6,7 +6,7 @@ function SliderImage() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const backgrounds = [
-    'url("/image/header_background.png")',
+    'url("/image/banner-slide-1.jpg")',
     'url("/image/banner-slide-2.jpg")',
     'url("/image/banner-slide-3.jpg")',
   ];
@@ -35,6 +35,7 @@ function SliderImage() {
     <div
       className="slider-container"
       style={{ backgroundImage: backgrounds[index] }}
+      id="slider"
     >
       <div className={`slider-overlay ${show ? "show" : ""}`}>
         <h1

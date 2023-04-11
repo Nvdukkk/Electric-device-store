@@ -74,11 +74,8 @@ body {
   color: var(--mainGold);
   font-weight: bold;
 }
-.aboutus-img::before {
-  display: block;
-  padding-top: var(--bs-aspect-ratio);
-  content: "";
-}
+
+
 
 .aboutus-box {
   --margin: 6rem;
