@@ -28,7 +28,7 @@ function GuestList() {
 
   return (
     <div
-      className="text-center mt-5 px-5"
+      className="text-center px-5"
       style={{ backgroundColor: "#f5f5f5", padding: "100px 0" }}
     >
       <h3

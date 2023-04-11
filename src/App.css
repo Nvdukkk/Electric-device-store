@@ -73,7 +73,19 @@ body {
   font-size: 30px;
   color: var(--mainGold);
   font-weight: bold;
-  /* text-shadow: 0 3px 2px #998100; */
+}
+.aboutus-img::before {
+  display: block;
+  padding-top: var(--bs-aspect-ratio);
+  content: "";
+}
+
+.aboutus-box {
+  --margin: 6rem;
+  position: relative;
+  margin-left: calc(var(--margin) * -1);
+  margin-right: var(--margin);
+  z-index: 200;
 }
 .box {
   background: #ffffff;
@@ -105,13 +117,13 @@ body {
   transform: scale(1.05);
 }
 
-.hover-up {
+/* .hover-up {
   transition: all ease 0.3s;
 }
 
 .hover-up:hover {
   transform: translateY(-15px);
-}
+} */
 
 .fade-left {
   animation-name: fadeInLeft;
@@ -128,6 +140,9 @@ body {
   animation-duration: 1s;
 }
 
+.slick-arrow {
+  background-color: red !important;
+}
 @keyframes slideInUp {
   0% {
     opacity: 0;

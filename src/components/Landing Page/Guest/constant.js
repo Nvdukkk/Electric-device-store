@@ -28,7 +28,6 @@ export const GUEST_LIST = [
 export const GUEST_REVIEW = [
   {
     id: 1,
-    classname: "fade-left",
     src: "image/guest1.png",
     name: "Bà: Nguyễn Thị Mơ",
     position: "Giám đốc CA Hà Nội",
@@ -37,7 +36,6 @@ export const GUEST_REVIEW = [
   },
   {
     id: 2,
-    classname: "fade-bottom",
     src: "image/guest2.png",
     name: "Bà: Hoàng Thúy Nga",
     position: "Trưởng phòng tài chính ĐH Bách Khoa",
@@ -46,7 +44,6 @@ export const GUEST_REVIEW = [
   },
   {
     id: 3,
-    classname: "fade-bottom",
     src: "image/guest3.png",
     name: "Ông: Vũ Minh Đức",
     position: "Hiệu trưởng trường THPT Trần Đăng Ninh",
@@ -55,7 +52,6 @@ export const GUEST_REVIEW = [
   },
   {
     id: 4,
-    classname: "fade-right",
     src: "image/guest4.png",
     name: "Bà: Nguyễn Thu Hương",
     position: "Trưởng phòng truyền thông VKX",

@@ -21,7 +21,7 @@ export default class Header extends Component {
           <Link to="/product">
             <ButtonContainer>
               <span className="mr-2">
-                <i className="fas fa-cart-plus"></i>
+                <i className="fas fa-cart-plus" />
               </span>
               Cửa hàng
             </ButtonContainer>
@@ -29,7 +29,7 @@ export default class Header extends Component {
           <Link to="/cart">
             <ButtonContainer>
               <span className="">
-                <i className="fab fa-shopify"></i>
+                <i className="fab fa-shopify" />
               </span>
             </ButtonContainer>
           </Link>

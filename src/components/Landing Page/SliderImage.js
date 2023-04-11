@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
-
 function SliderImage() {
+
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
   const backgrounds = [
@@ -13,11 +13,11 @@ function SliderImage() {
   const h1Text = [
     "ĐẠI LÝ PHÂN PHỐI ĐỒ ĐIỆN",
     "NHÀ THẦU UY TÍN",
-    "ĐA DẠNG CHỦNG LOẠI.",
+    "ĐA DẠNG CHỦNG LOẠI",
   ];
   const content = [
-    "TOP 1 VIỆT NAM",
-    "HƠN 10 NĂM KINH NGHIỆM",
+    "Top 1 Việt Nam",
+    "Hơn 10 năm kinh nghiệm",
     "Đầy đủ thương hiệu",
   ];
   useEffect(() => {
