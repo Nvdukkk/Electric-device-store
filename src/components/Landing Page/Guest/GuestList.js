@@ -4,15 +4,15 @@ import Slider from "react-slick";
 function GuestList() {
   const settingSlider = {
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
@@ -51,14 +51,10 @@ function GuestList() {
         quốc tế. Tất cả những đối tác từ trong nước tới nước ngoài đều có những
         phản hồi tích cực về giải pháp và phần mềm của chúng tôi.
       </p>
-      <Slider {...settingSlider}>
+      <Slider className="mt-5" {...settingSlider}>
         {GUEST_LIST.map(({ id, src }) => (
-          <div key={id}>
-            <img
-              src={src}
-              alt="guest-list"
-              style={{ width: "100%" }}
-            />
+          <div key={id} className="d-flex justify-content-center ">
+            <img src={src} alt="guest-list" style={{ width: "50%" }} />
           </div>
         ))}
       </Slider>

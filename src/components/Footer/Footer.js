@@ -5,7 +5,7 @@ function Footer() {
   const renderChildren = (item) => {
     return item.map(({ id, icon, content }) => (
       <div key={id} className="d-flex p-2">
-        <img src={icon} alt="icon" />
+        <img src={icon} alt="" />
         <p
           className="m-0"
           style={{

@@ -8,6 +8,7 @@
   --mainWhite: #fff;
   --mainDark: #232528;
   --mainYellow: #ffa400;
+  --mainGold: #ccac00;
 }
 .row {
   margin-left: 0px !important;
@@ -67,7 +68,13 @@ body {
 .slider-overlay.show {
   animation: slideInUp ease 3s;
 }
-
+.logo-text {
+  margin: 0;
+  font-size: 30px;
+  color: var(--mainGold);
+  font-weight: bold;
+  /* text-shadow: 0 3px 2px #998100; */
+}
 .box {
   background: #ffffff;
   text-align: center;
@@ -85,6 +92,7 @@ body {
 .card {
   height: 100%;
   justify-content: space-between;
+  birder-radius: 15px;
 }
 
 .card-visit {

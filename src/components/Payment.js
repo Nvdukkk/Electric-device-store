@@ -12,8 +12,8 @@ function Payment() {
 
   let cartData = {title: '', count: ''};
 
-  const onSubmit = (data) => {
-    const mergeData = Object.assign({}, data, cartData)
+  const onSubmit = (inputData) => {
+    const mergeData = Object.assign({}, inputData, cartData)
     
     axios.post(
       "https://sheet.best/api/sheets/eb5ec9af-83b0-431b-8f6d-75ba9973d95a",
@@ -36,7 +36,6 @@ function Payment() {
             cartData.count += ' ; '
           }
         }
-        console.log(cartData);
         return (
           <div>
             <h3>Đặt hàng</h3>

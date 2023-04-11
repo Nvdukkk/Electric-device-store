@@ -5,7 +5,7 @@ export const GUEST_LIST = [
   },
   {
     id: 2,
-    src: "https://maludesign.vn/wp-content/uploads/2021/11/logo-cong-ty-xay-dung-6_1586786415-800x800.png",
+    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
   },
   {
     id: 3,
@@ -15,12 +15,20 @@ export const GUEST_LIST = [
     id: 4,
     src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
   },
+  {
+    id: 5,
+    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+  },
+  {
+    id: 6,
+    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+  },
 ];
 
 export const GUEST_REVIEW = [
   {
     id: 1,
-    classname: 'fade-left',
+    classname: "fade-left",
     src: "image/guest1.png",
     name: "Bà: Nguyễn Thị Mơ",
     position: "Giám đốc CA Hà Nội",
@@ -29,7 +37,7 @@ export const GUEST_REVIEW = [
   },
   {
     id: 2,
-    classname: 'fade-bottom',
+    classname: "fade-bottom",
     src: "image/guest2.png",
     name: "Bà: Hoàng Thúy Nga",
     position: "Trưởng phòng tài chính ĐH Bách Khoa",
@@ -38,7 +46,7 @@ export const GUEST_REVIEW = [
   },
   {
     id: 3,
-    classname: 'fade-bottom',
+    classname: "fade-bottom",
     src: "image/guest3.png",
     name: "Ông: Vũ Minh Đức",
     position: "Hiệu trưởng trường THPT Trần Đăng Ninh",
@@ -47,7 +55,7 @@ export const GUEST_REVIEW = [
   },
   {
     id: 4,
-    classname: 'fade-right',
+    classname: "fade-right",
     src: "image/guest4.png",
     name: "Bà: Nguyễn Thu Hương",
     position: "Trưởng phòng truyền thông VKX",

@@ -5,7 +5,11 @@ export default function Title({ title }) {
     <div
       className="row"
       style={{
-        backgroundColor: "#eee",
+        backgroundImage:
+          "url(https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80)",
+        backgroundPosition: "cemter",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div
