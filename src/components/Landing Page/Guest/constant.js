@@ -1,27 +1,27 @@
 export const GUEST_LIST = [
   {
     id: 1,
-    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+    src: "/guest image/logo-cadisun.png",
   },
   {
     id: 2,
-    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+    src: "/guest image/logo-lsvinaa.png",
   },
   {
     id: 3,
-    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+    src: "/guest image/logo-rang-dong.png",
   },
   {
     id: 4,
-    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+    src: "/guest image/logo-vivc.png",
   },
   {
     id: 5,
-    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+    src: "/guest image/logo-cadivi.png",
   },
   {
     id: 6,
-    src: "https://printgo.vn/uploads/media/774255/logo-cong-ty-xay-dung-3_1586785660.png",
+    src: "/guest image/logo-datxanh.png",
   },
 ];
 

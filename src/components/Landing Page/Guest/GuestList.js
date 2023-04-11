@@ -54,7 +54,9 @@ function GuestList() {
       <Slider className="mt-5" {...settingSlider}>
         {GUEST_LIST.map(({ id, src }) => (
           <div key={id} className="d-flex justify-content-center ">
-            <img src={src} alt="guest-list" style={{ width: "50%" }} />
+            <div className="guest-box-list">
+              <img src={src} alt="guest-list" />
+            </div>
           </div>
         ))}
       </Slider>

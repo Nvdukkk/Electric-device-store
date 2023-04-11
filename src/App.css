@@ -75,7 +75,15 @@ body {
   font-weight: bold;
 }
 
+.guest-box-list{
+  padding: 30px 40px;
+  background-color:white;
+}
 
+.guest-box-list img{
+  width: 150px;
+  height: 150px;
+}
 
 .aboutus-box {
   --margin: 6rem;
