@@ -87,7 +87,7 @@ const ProductWrapper = styled.div`
   .card {
     border-color: trasparent;
     transition: all 0.5s linear;
-    border-radius: 15px;
+    border-radius: 0;
   }
   .card-footer {
     background: transparent;
@@ -119,11 +119,10 @@ const ProductWrapper = styled.div`
     bottom: 20px;
     right: 20px;
     padding: 0.2rem 0.4rem;
-    background: var(--mainWhite);
-    border: 1px solid var(--mainBlue);
-    color: var(--mainBlue);
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
     font-size: 1.4rem;
-    border-radius: 5px;
     opacity: 0;
     transition: all 0.3s ease;
   }
@@ -132,7 +131,7 @@ const ProductWrapper = styled.div`
   }
   .cart-btn:hover {
     color: var(--mainWhite);
-    background-color: var(--mainBlue);
+    background-color: #000;
     cursor: pointer;
   }
 `;

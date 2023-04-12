@@ -5,7 +5,7 @@ function CardVisit() {
   return (
     <div
       style={{
-        margin: "50px 0",
+        margin: "50px 0 0",
       }}
     >
       <div className="container">

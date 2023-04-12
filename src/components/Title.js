@@ -21,7 +21,7 @@ export default function Title({ title }) {
         <h1
           style={{
             fontSize: "40px",
-            color: "var(--mainBlue)",
+            color: "#000",
             letterSpacing: "0px",
             textTransform: "uppercase",
             fontWeight: "bold",
