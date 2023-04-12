@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ProductList from "./components/Product/ProductList";
 import Details from "./components/Product/Details";
 import Cart from "./components/Cart";
-import Default from "./components/Default";
+import NotFound from "./components/NotFound";
 import ProductModal from "./components/Product/ProductModal";
 import LandingPage from "./components/Landing Page/LandingPage";
 import Header from "./components/Header";
@@ -23,7 +23,7 @@ function App() {
         <Route path="/cart" component={Cart} />
         <Route path="/pay" component={Payment} />
         <Route path="/comingsoon" component={ComingSoon} />
-        <Route component={Default} />
+        <Route component={NotFound} />
       </Switch>
       <ProductModal />
     </React.Fragment>

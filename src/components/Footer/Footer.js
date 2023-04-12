@@ -16,15 +16,15 @@ function Footer() {
             Liên hệ
           </h4>
           <p>
-            <i class="fas fa-phone-alt mr-2"></i>
+            <i class="fas fa-phone-alt me-2"></i>
             086.993.0568
           </p>
           <p>
-            <i class="fas fa-envelope mr-2"></i>
+            <i class="fas fa-envelope me-2"></i>
             thienansupport@gmail.com
           </p>
           <p>
-            <i class="fas fa-map-marker-alt mr-2"></i>
+            <i class="fas fa-map-marker-alt me-2"></i>
             68/188/45 Nguyễn Văn Linh, Q.Long Biên
           </p>
         </div>
@@ -33,7 +33,7 @@ function Footer() {
             Liên kết
           </h4>
           <a
-            href="#slider "
+            href="#slider"
             style={{
               color: "#fff",
             }}
@@ -41,7 +41,7 @@ function Footer() {
             Trang chủ
           </a>
           <a
-            href="#aboutus "
+            href="#aboutus"
             style={{
               color: "#fff",
               margin: "16px 0",
@@ -52,7 +52,7 @@ function Footer() {
           <Link
             to="/product"
             style={{
-              color: "#ffff",
+              color: "#fff",
             }}
           >
             Shop

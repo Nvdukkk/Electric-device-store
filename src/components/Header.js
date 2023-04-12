@@ -7,7 +7,7 @@ import { ButtonContainer } from "./Button";
 export default class Header extends Component {
   render() {
     return (
-      <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
+      <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 justify-content-between">
         <Link to="/" className="d-flex align-items-center text-decoration-none">
           <img
             src={logo}

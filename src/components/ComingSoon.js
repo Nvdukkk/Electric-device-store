@@ -5,20 +5,20 @@ import { ButtonContainer } from "./Button";
 function ComingSoon() {
   return (
     <div className="comingsoon">
-      <div className="container text-center mt-4">
-        <div className="mb-5 d-flex justify-content-between">
+      <div className="container text-center">
+        <div className="mb-5 d-flex justify-content-between pt-4">
           <h3>Coming Soon</h3>
-          <div>
-            <a href="#" className="py-2 px-3">
+          <div className="">
+            <a href="#" className="py-2 px-2 px-md-3 text-white">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="py-2 px-3">
+            <a href="#" className="py-2 px-2 px-md-3 text-white">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="py-2 px-3">
+            <a href="#" className="py-2 px-2 px-md-3 text-white">
               <i className="fab fa-youtube"></i>
             </a>
-            <a href="#" className="py-2 px-3">
+            <a href="#" className="py-2 px-2 px-md-3 text-white">
               <i className="fab fa-instagram"></i>
             </a>
           </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { ButtonContainer } from "../Button";
 import { Link } from "react-router-dom";
 
 function AboutUs() {

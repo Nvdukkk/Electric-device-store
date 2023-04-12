@@ -23,8 +23,9 @@ export default function EmptyCart() {
           <img
             src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-3609561-3016826.png"
             style={{
-              width: "70%",
+              width: "50%",
             }}
+            alt=""
           ></img>
         </div>
       </div>
