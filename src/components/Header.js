@@ -17,13 +17,13 @@ export default class Header extends Component {
           />
           <p className="logo-text">Thiên Ân</p>
         </Link>
-        <div className="ml-auto">
+        <div>
           <Link to="/product">
             <ButtonContainer>
-              <span className="mr-2">
-                <i className="fas fa-cart-plus" />
-              </span>
-              Cửa hàng
+                <span className="me-0 me-sm-2">
+                  <i className="fas fa-cart-plus" />
+                </span>
+                Cửa hàng
             </ButtonContainer>
           </Link>
           <Link to="/cart">

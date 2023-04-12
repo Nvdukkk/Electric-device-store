@@ -10,7 +10,7 @@ export default class ProductModal extends Component {
       <ProductConsumer>
         {(value) => {
           const { modalOpen, closeModal } = value;
-          const { img, title, price } = value.modalProduct;
+          const { id, img, title, price } = value.modalProduct;
           if (!modalOpen) {
             return null;
           } else {
@@ -20,7 +20,7 @@ export default class ProductModal extends Component {
                   <div className="row">
                     <div
                       id="modal"
-                      className="col-8 mx-auto col-md-6 col-lg-6 text-center p-4"
+                      className="col-8 mx-auto mt-5 col-md-6 col-lg-6 text-center p-4"
                     >
                       <img
                         src={img}
@@ -38,7 +38,10 @@ export default class ProductModal extends Component {
                         </ButtonContainer>
                       </Link>
                       <Link to="/cart">
-                        <ButtonContainer cart onClick={() => closeModal()}>
+                        <ButtonContainer cart onClick={() => {
+                          value.addToCart(id)
+                          closeModal()
+                        }}>
                           Thêm vào giỏ hàng
                         </ButtonContainer>
                       </Link>

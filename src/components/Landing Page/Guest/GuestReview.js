@@ -24,7 +24,7 @@ function GuestReview() {
         margin: "100px 0",
       }}
     >
-      <div className="container-fluid">
+      <div className="container">
         <h3
           className="text-center"
           style={{
@@ -36,7 +36,7 @@ function GuestReview() {
           CHIA SẺ TỪ ĐỐI TÁC
         </h3>
 
-        <div className="container-lg">
+        <div>
           <Slider {...settingSlider}>
             {GUEST_REVIEW.map(({ id, src, name, position, review }) => (
               <div key={id}>

@@ -23,9 +23,8 @@ export default class Detail extends Component {
                   <img src={img} alt="product" className="img-fluid" />
                 </div>
                 <div className="col-10 mx-auto col-md-6 my-3">
-                  <h2>model: {title}</h2>
                   <h4 className="text-title  text-muted mt-3 mb-2">
-                    made by: <span>{company}</span>
+                    Sản xuất bởi: <span>{company}</span>
                   </h4>
                   <h4 className="text-blue">
                     <strong>
@@ -34,23 +33,24 @@ export default class Detail extends Component {
                     </strong>
                   </h4>
                   <p className="font-weight-bold mt-3 mb-0">
-                    Thông tin về sản phẩm:
+                    Tổng quan:
                   </p>
                   <p className="text-muted lead">{info}</p>
                   <div>
                     <Link to="/product">
                       <ButtonContainer>Quay lại cửa hàng</ButtonContainer>
                     </Link>
-                    <ButtonContainer
-                      cart
-                      disable={inCart ? true : false}
-                      onClick={() => {
-                        value.addToCart(id);
-                        value.openModal(id);
-                      }}
-                    >
-                      {inCart ? "Đã có trong giỏ hàng" : "Thêm vào giỏ hàng"}
-                    </ButtonContainer>
+                    <Link to="/cart">
+                      <ButtonContainer
+                        cart
+                        disable={inCart ? true : false}
+                        onClick={() => {
+                          value.addToCart(id);
+                        }}
+                      >
+                        {inCart ? "Đã có trong giỏ hàng" : "Thêm vào giỏ hàng"}
+                      </ButtonContainer>
+                    </Link>
                   </div>
                 </div>
               </div>

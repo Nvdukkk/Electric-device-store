@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { storeProducts, detailProduct } from './data';
+import { storeProducts } from './data';
 
 const ProductContext = React.createContext();
-// Provider
-// Consumer
 
 class ProductProvider extends Component {
   state = {
     products: [],
-    detailProduct: detailProduct,
+    detailProduct: storeProducts,
     cart: [],
     modalOpen: false,
-    modalProduct: detailProduct,
+    modalProduct: storeProducts,
     cartSubTotal: 0,
     cartTax: 0,
     cartTotal: 0
@@ -82,7 +80,6 @@ class ProductProvider extends Component {
     product.count = product.count + 1;
     product.total = product.count * product.price;
     this.setState(() => { return { cart: [...tempCart] } }, () => { this.addTotals() })
-
   }
 
   decrement = (id) => {
@@ -137,13 +134,13 @@ class ProductProvider extends Component {
   addTotals = () => {
     let subTotal = 0;
     this.state.cart.map(item => (subTotal += item.total));
-    const tempTax = subTotal * 0.1;
-    const tax = parseFloat(tempTax.toFixed(2));
-    const total = subTotal + tax;
+    const tempDiscount = subTotal * 0.1;
+    const discount = parseFloat(tempDiscount.toFixed(2));
+    const total = subTotal - discount;
     this.setState(() => {
       return {
         cartSubTotal: subTotal,
-        cartTax: tax,
+        cartDiscount: discount,
         cartTotal: total
       }
     })

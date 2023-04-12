@@ -53,7 +53,6 @@ function SliderImage() {
             backgroundColor: "#fff",
             color: "#000",
             fontWeight: "600",
-            borderRadius: "0px",
           }}
         >
           ĐẶT HÀNG NGAY

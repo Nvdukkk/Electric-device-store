@@ -40,7 +40,7 @@ function AboutUs() {
                   gap: "10px",
                 }}
               >
-                Xem thêm <i class="fas fa-arrow-right"></i>
+                Xem thêm <i className="fas fa-arrow-right"></i>
               </Link>
             </div>
           </div>

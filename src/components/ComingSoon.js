@@ -29,8 +29,8 @@ function ComingSoon() {
           <ButtonContainer>Nhận thông báo</ButtonContainer>
         </div>
         <div className="p-5">
-          Copyright © 2018 by
-          <span className="text-primary"> Thuanthanhtech Co., Ltd. </span>
+          Copyright © 2022 by
+          <span className="text-primary"> Thiên Ân Co., Ltd. </span>
            All rights reserved
         </div>
       </div>

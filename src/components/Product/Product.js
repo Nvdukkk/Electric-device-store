@@ -8,7 +8,7 @@ export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
     return (
-      <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+      <ProductWrapper className="col-6 mx-auto h-50 h-lg-100 col-lg-3 my-3">
         <div className="card">
           <ProductConsumer>
             {(value) => (
@@ -23,7 +23,6 @@ export default class Product extends Component {
                   className="cart-btn"
                   disabled={inCart ? true : false}
                   onClick={() => {
-                    value.addToCart(id);
                     value.openModal(id);
                   }}
                 >
@@ -48,7 +47,7 @@ export default class Product extends Component {
 
           <div className="card-footer d-flex flex-column align-items-center justify-content-center">
             <p
-              className="align-seft-center "
+              className="product-limit-text"
               style={{
                 fontSize: "14px",
                 fontWeight: "500",
@@ -63,7 +62,7 @@ export default class Product extends Component {
                 fontSize: "14px",
               }}
             >
-              <span className="mr-1">$</span>
+              <span className="me-1">$</span>
               {price}
             </h5>
           </div>
