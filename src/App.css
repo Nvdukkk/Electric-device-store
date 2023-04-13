@@ -30,9 +30,6 @@ a {
   background-color: transparent;
 }
 
-.text-title {
-  letter-spacing: 0.3rem;
-}
 
 .text-blue {
   color: var(--mainBlue);
@@ -370,8 +367,15 @@ a {
     width: 80px;
     height: 80px;
   }
-  .slick-slider .slick-prev:before,
-  .slick-slider .slick-next:before {
-    font-size: 0px !important;
+  .slick-arrow{
+    display:none !important;
+  }
+  
+  
+}
+
+@media (min-width: 767px) {
+  .text-title {
+    letter-spacing: 0.3rem;
   }
 }

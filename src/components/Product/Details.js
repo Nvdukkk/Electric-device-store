@@ -23,7 +23,7 @@ export default class Detail extends Component {
                   <img src={img} alt="product" className="img-fluid" />
                 </div>
                 <div className="col-10 mx-auto col-md-6 my-3">
-                  <h4 className="text-title  text-muted mt-3 mb-2">
+                  <h4 className="text-title text-muted mt-3 mb-2">
                     Sản xuất bởi: <span>{company}</span>
                   </h4>
                   <h4 className="text-blue">

@@ -56,10 +56,12 @@ function GuestList() {
             margin: "20px auto 0",
           }}
         >
-          Trải qua nhiều năm làm việc, chúng tôi đã hợp tác với rất nhiều doanh
-          nghiệp, cơ quan giáo dục lớn và nổi tiếng trên toàn lãnh thổ Việt Nam
-          và quốc tế. Tất cả những đối tác từ trong nước tới nước ngoài đều có
-          những phản hồi tích cực về giải pháp và phần mềm của chúng tôi.
+          Trải qua nhiều năm hoạt động, chúng tôi đã hợp tác thành công với
+          nhiều doanh nghiệp và tổ chức trong ngành xây dựng, bao gồm cả các
+          công ty trong và ngoài nước. Tất cả đối tác đều có những phản hồi tích
+          cực về các giải pháp và dịch vụ của chúng tôi, đóng góp quan trọng vào
+          sự phát triển và tăng cường hiệu quả hoạt động của họ trong lĩnh vực
+          xây dựng.
         </p>
         <Slider className="mt-5" {...settingSlider}>
           {GUEST_LIST.map(({ id, src }) => (

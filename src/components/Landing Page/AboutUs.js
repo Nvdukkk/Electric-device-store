@@ -25,10 +25,13 @@ function AboutUs() {
                 </p>
               </div>
               <p className="mt-4 mt-lg-5">
-                Sứ mệnh của Thiên An là đem lại những giải pháp và dịch vụ công
-                nghệ tốt nhất nằm đáp những sự kỳ vọng của khách hàng, giúp
-                khách hàng đạt được mục tiêu trong chiến lược kinh doanh lâu dài
-                của họ.
+                Sứ mệnh của Thiên An là cung cấp các giải pháp và dịch vụ tối ưu
+                nhằm đáp ứng mọi nhu cầu và mong muốn của khách hàng, góp phần
+                giúp khách hàng đạt được các mục tiêu kinh doanh dài hạn trong
+                lĩnh vực xây dựng. Chúng tôi cam kết cung cấp các sản phẩm và
+                dịch vụ chất lượng cao, đảm bảo an toàn và hiệu quả, đồng thời
+                luôn nâng cao chất lượng phục vụ để đáp ứng sự yêu cầu của thị
+                trường và đối tác.
               </p>
               <Link
                 to="/comingsoon"

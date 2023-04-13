@@ -20,4 +20,8 @@ export const ButtonContainer = styled.button`
   .span {
     font-size: 20px;
   }
+  @media (max-width: 500px){
+    padding: 3px 5px;
+  }
 `;
+
