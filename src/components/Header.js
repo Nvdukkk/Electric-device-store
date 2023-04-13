@@ -8,7 +8,7 @@ export default class Header extends Component {
   render() {
     return (
       <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 justify-content-between">
-        <Link to="/" className="d-flex align-items-center text-decoration-none">
+        <Link to="/" className="d-flex align-items-center text-decoration-none ms-2 ms-sm-0">
           <img
             src={logo}
             alt="logo"
@@ -20,17 +20,13 @@ export default class Header extends Component {
         <div>
           <Link to="/product">
             <ButtonContainer>
-                <span className="me-0 me-sm-2">
-                  <i className="fas fa-cart-plus" />
-                </span>
-                Cửa hàng
+              <i className="fas fa-cart-plus me-0 me-sm-2" />
+              <span className="d-none d-sm-inline">Cửa hàng</span>
             </ButtonContainer>
           </Link>
           <Link to="/cart">
             <ButtonContainer>
-              <span className="">
-                <i className="fab fa-shopify" />
-              </span>
+              <i className="fab fa-shopify" />
             </ButtonContainer>
           </Link>
         </div>

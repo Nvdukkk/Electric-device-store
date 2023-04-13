@@ -20,14 +20,16 @@ function GuestList() {
         breakpoint: 990,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
+          dots: true,
         },
       },
       {
-        breakpoint: 750,
+        breakpoint: 500,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true,
         },
       },
     ],
