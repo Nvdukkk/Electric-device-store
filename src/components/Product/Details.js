@@ -32,24 +32,27 @@ export default class Detail extends Component {
                       {price}
                     </strong>
                   </h4>
-                  <p className="font-weight-bold mt-3 mb-0">
-                    Tổng quan:
-                  </p>
+                  <p className="font-weight-bold mt-3 mb-0">Tổng quan:</p>
                   <p className="text-muted lead">{info}</p>
                   <div>
                     <Link to="/product">
                       <ButtonContainer>Quay lại cửa hàng</ButtonContainer>
                     </Link>
                     <Link to="/cart">
-                      <ButtonContainer
-                        cart
-                        disable={inCart ? true : false}
-                        onClick={() => {
-                          value.addToCart(id);
-                        }}
-                      >
-                        {inCart ? "Đã có trong giỏ hàng" : "Thêm vào giỏ hàng"}
-                      </ButtonContainer>
+                      {inCart ? (
+                        <ButtonContainer cart>
+                          Đã có trong giỏ hàng
+                        </ButtonContainer>
+                      ) : (
+                        <ButtonContainer
+                          cart
+                          onClick={() => {
+                            value.addToCart(id);
+                          }}
+                        >
+                          Thêm vào giỏ hàng
+                        </ButtonContainer>
+                      )}
                     </Link>
                   </div>
                 </div>

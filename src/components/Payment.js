@@ -38,27 +38,16 @@ function Payment() {
         }
         return (
           <div
-            className="d-flex justify-content-center align-items-center"
+            className="d-flex justify-content-center align-items-center w-100"
             style={{
-              position: "fixed",
-              top: "0",
-              left: "0",
-              width: "100%",
-              height: "100%",
-              backgroundImage:
-                'url("https://images.unsplash.com/photo-1635151227785-429f420c6b9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80")',
+              minHeight: "89.6vh",
+              backgroundImage: 'url("../image/payment-background.webp")',
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <div
-              className="container"
-              style={{
-                height: "70%",
-                marginTop: "100px",
-              }}
-            >
+            <div className="container h-75">
               <div className="row h-100 bg-white">
                 <div
                   className="col-lg-6 col-md-6 col-12 "
@@ -69,7 +58,7 @@ function Payment() {
                   <div className="w-100 h-100 d-flex justify-content-center align-items-center">
                     <img
                       className="w-50"
-                      src="https://cdn-icons-png.flaticon.com/512/4952/4952984.png"
+                      src="../image/payment.png"
                       alt="Thanh toán"
                       style={{
                         transform: "rotateY(180deg)",
@@ -79,34 +68,17 @@ function Payment() {
                 </div>
                 <div className="col-lg-6 col-md-6 col-12 ">
                   <div className="p-3 h-100 d-flex flex-column align-items-center justify-content-evenly">
-                    <h3
-                      style={{
-                        textTransform: "uppercase",
-                        fontWeight: "700",
-                      }}
-                    >
-                      Đặt hàng
-                    </h3>
+                    <h3 className="fw-bold text-uppercase">Đặt hàng</h3>
                     <form
                       onSubmit={handleSubmit(onSubmit)}
-                      className="d-flex flex-column"
-                      style={{
-                        gap: "15px",
-                        width: "80%",
-                      }}
+                      className="d-flex flex-column w-75 gap-3"
                     >
-                      <div className="">
+                      <div>
                         <input
                           type="text"
                           name="fullname"
                           placeholder="Họ tên..."
-                          className="w-100"
-                          style={{
-                            padding: "10px",
-                            border: "none",
-                            borderBottom: "1px solid #bbb",
-                            outline: "none",
-                          }}
+                          className="w-100 p-2 border-top-0 border-start-0 border-end-0 border-bottom-1 border-dark-subtle"
                           {...register("name", {
                             required: "Vui lòng nhập họ tên",
                           })}
@@ -117,18 +89,12 @@ function Payment() {
                           </span>
                         )}
                       </div>
-                      <div className="">
+                      <div>
                         <input
                           type="text"
                           name="address"
                           placeholder="Địa chỉ..."
-                          className="w-100"
-                          style={{
-                            padding: "10px",
-                            border: "none",
-                            borderBottom: "1px solid #bbb",
-                            outline: "none",
-                          }}
+                          className="w-100 p-2 border-top-0 border-start-0 border-end-0 border-bottom-1 border-dark-subtle"
                           {...register("address", {
                             required: "Vui lòng nhập địa chỉ",
                           })}
@@ -139,18 +105,12 @@ function Payment() {
                           </span>
                         )}
                       </div>
-                      <div className="">
+                      <div>
                         <input
                           type="text"
                           name="number"
                           placeholder="Số điện thoại..."
-                          className="w-100"
-                          style={{
-                            padding: "10px",
-                            border: "none",
-                            borderBottom: "1px solid #bbb",
-                            outline: "none",
-                          }}
+                          className="w-100 p-2 border-top-0 border-start-0 border-end-0 border-bottom-1 border-dark-subtle"
                           {...register("number", {
                             required: "Vui lòng nhập số điện thoại",
                             minLength: {
@@ -167,13 +127,8 @@ function Payment() {
                         )}
                       </div>
                       <button
-                        className="btn"
+                        className="btn btn-black mt-5 px-2 py-3 border-1 border-dark"
                         type="submit"
-                        style={{
-                          border: "1px solid #000",
-                          marginTop: "30px",
-                          padding: "10px 20px",
-                        }}
                       >
                         Thanh toán khi nhận hàng
                       </button>

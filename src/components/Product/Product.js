@@ -38,7 +38,7 @@ export default class Product extends Component {
                       Đã có trong giỏ hàng
                     </p>
                   ) : (
-                    <i className="fab fa-shopify"></i>
+                    <i className="fab fa-shopify" />
                   )}
                 </button>
               </div>

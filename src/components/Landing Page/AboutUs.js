@@ -1,19 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useVisible from "../../customHook/useVisible";
 
 function AboutUs() {
+
+  const visible = useVisible("aboutus");
+
   return (
     <div id="aboutus">
       <div className="container">
         <div className="row gx-0 align-items-center">
-          <div className="col-lg-6 p-0 aboutus-img">
+          <div className={`col-lg-6 p-0 aboutus-img ${visible ? 'fade-left' : ''}`} >
             <img
-              src="https://images.unsplash.com/photo-1514380174678-ac7d0a175926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+              src="../image/aboutus-img.webp"
               alt="about us img"
               className="w-100"
-            ></img>
+            />
           </div>
-          <div className="col-lg-6 p-0">
+          <div className={`col-lg-6 p-0 ${visible ? 'fade-right' : ''}`}>
             <div className="aboutus-box bg-light p-4 p-lg-5 ">
               <div className="text-center">
                 <h1 className="text-uppercase display-6 fw-bold mb-2">
@@ -24,7 +28,7 @@ function AboutUs() {
                   chúng tôi.
                 </p>
               </div>
-              <p className="mt-4 mt-lg-5">
+              <p className="mt-4 mt-lg-5 line-clamp-4">
                 Sứ mệnh của Thiên An là cung cấp các giải pháp và dịch vụ tối ưu
                 nhằm đáp ứng mọi nhu cầu và mong muốn của khách hàng, góp phần
                 giúp khách hàng đạt được các mục tiêu kinh doanh dài hạn trong
@@ -33,17 +37,8 @@ function AboutUs() {
                 luôn nâng cao chất lượng phục vụ để đáp ứng sự yêu cầu của thị
                 trường và đối tác.
               </p>
-              <Link
-                to="/comingsoon"
-                style={{
-                  color: "#000",
-                  marginTop: "30px",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                }}
-              >
-                Xem thêm <i className="fas fa-arrow-right"></i>
+              <Link to="/comingsoon" className="text-black mt-5">
+                Xem thêm <i className="fas fa-arrow-right" />
               </Link>
             </div>
           </div>

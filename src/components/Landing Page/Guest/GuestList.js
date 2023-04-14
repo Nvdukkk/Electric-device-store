@@ -50,12 +50,7 @@ function GuestList() {
         >
           KHÁCH HÀNG
         </h3>
-        <p
-          style={{
-            width: "80%",
-            margin: "20px auto 0",
-          }}
-        >
+        <p className="line-clamp-4 w-75 mt-3 mx-auto">
           Trải qua nhiều năm hoạt động, chúng tôi đã hợp tác thành công với
           nhiều doanh nghiệp và tổ chức trong ngành xây dựng, bao gồm cả các
           công ty trong và ngoài nước. Tất cả đối tác đều có những phản hồi tích

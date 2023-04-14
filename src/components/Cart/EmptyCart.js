@@ -13,20 +13,15 @@ export default function EmptyCart() {
           Giỏ hàng của bạn đang trống
         </h1>
         <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          className="w-100 d-flex justify-content-center align-items-center"
         >
           <img
-            src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-3609561-3016826.png"
+            src="../image/empty-cart.png"
             style={{
               width: "50%",
             }}
-            alt=""
-          ></img>
+            alt="Giỏ hàng của bạn đang trống"
+          />
         </div>
       </div>
     </div>

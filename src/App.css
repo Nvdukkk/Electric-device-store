@@ -38,15 +38,9 @@ a {
   border-radius: 0px !important;
 }
 
-.btn-black {
-  background: transparent;
-  font-size: 0.8rem !important;
-  border-radius: 0 !important;
-}
-
 .btn-black:hover {
-  background: var(--mainDark) !important;
   color: var(--mainWhite) !important;
+  background: var(--mainDark) !important;
 }
 
 .cart-icon {
@@ -54,6 +48,20 @@ a {
   font-size: 20px;
 }
 
+/* .incart-span {
+  font-size: 18px;
+  background: transparent;
+  border: 0.05rem solid #000;
+  border-color: var(--mainYellow);
+  color: var(--mainYellow);
+  padding: 10px 15px;
+  margin: 0.2rem 0.5rem 0.2rem 0;
+  transition: all 0.3s ease;
+
+  @media (max-width: 500px) {
+    padding: 3px 5px;
+  }
+} */
 .slider-container {
   height: 800px;
   background-size: cover;
@@ -269,14 +277,6 @@ a {
   font-size: 40px !important;
 }
 
-.btn {
-  background-color: #000;
-}
-
-.btn:hover {
-  background-color: #000;
-  color: #ffffff;
-}
 
 @keyframes slideInUp {
   0% {
@@ -353,6 +353,15 @@ a {
     width: 80%;
     margin: 0 auto;
   }
+  .line-clamp-4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    line-clamp: var(--line, 4);
+    -webkit-line-clamp: var(--line, 4);
+  }
 }
 
 @media (max-width: 768px) {
@@ -376,6 +385,7 @@ a {
   .slick-arrow {
     display: none !important;
   }
+  
 }
 
 @media (min-width: 767px) {

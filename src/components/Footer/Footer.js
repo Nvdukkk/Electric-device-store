@@ -16,15 +16,15 @@ function Footer() {
             Liên hệ
           </h4>
           <p>
-            <i className="fas fa-phone-alt me-2"></i>
+            <i className="fas fa-phone-alt me-2" />
             086.993.0568
           </p>
           <p>
-            <i className="fas fa-envelope me-2"></i>
+            <i className="fas fa-envelope me-2" />
             thienansupport@gmail.com
           </p>
           <p>
-            <i className="fas fa-map-marker-alt me-2"></i>
+            <i className="fas fa-map-marker-alt me-2" />
             68/188/45 Nguyễn Văn Linh, Q.Long Biên
           </p>
         </div>
@@ -70,7 +70,7 @@ function Footer() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="map"
-          ></iframe>
+          />
         </div>
       </div>
       <p

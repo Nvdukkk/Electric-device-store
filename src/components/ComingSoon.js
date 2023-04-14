@@ -10,16 +10,16 @@ function ComingSoon() {
           <h3>Coming Soon</h3>
           <div className="">
             <a href="#" className="py-2 px-2 px-md-3 text-white">
-              <i className="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f" />
             </a>
             <a href="#" className="py-2 px-2 px-md-3 text-white">
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-twitter" />
             </a>
             <a href="#" className="py-2 px-2 px-md-3 text-white">
-              <i className="fab fa-youtube"></i>
+              <i className="fab fa-youtube" />
             </a>
             <a href="#" className="py-2 px-2 px-md-3 text-white">
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram" />
             </a>
           </div>
         </div>
