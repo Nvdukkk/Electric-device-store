@@ -12,10 +12,9 @@ export default function EmptyCart() {
         >
           Giỏ hàng của bạn đang trống
         </h1>
-        <div
-          className="w-100 d-flex justify-content-center align-items-center"
-        >
+        <div className="w-100 d-flex justify-content-center align-items-center">
           <img
+            loading="lazy"
             src="../image/empty-cart.png"
             style={{
               width: "50%",

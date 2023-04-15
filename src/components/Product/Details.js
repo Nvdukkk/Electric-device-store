@@ -20,31 +20,36 @@ export default class Detail extends Component {
 
               <div className="row">
                 <div className="col-10 mx-auto col-md-6 my-3">
-                  <img src={img} alt="product" className="img-fluid" />
+                  <img
+                    loading="lazy"
+                    src={img}
+                    alt="product"
+                    className="img-fluid"
+                  />
                 </div>
                 <div className="col-10 mx-auto col-md-6 my-3">
                   <h4 className="text-title text-muted mt-3 mb-2">
                     Sản xuất bởi: <span>{company}</span>
                   </h4>
                   <h4 className="text-blue">
-                    <strong>
-                      Giá: <span>$</span>
-                      {price}
-                    </strong>
+                    <strong>{`Giá: ${price} vnđ`}</strong>
                   </h4>
                   <p className="font-weight-bold mt-3 mb-0">Tổng quan:</p>
                   <p className="text-muted lead">{info}</p>
-                  <div>
+                  <div className="text-center">
                     <Link to="/product">
-                      <ButtonContainer>Quay lại cửa hàng</ButtonContainer>
+                      <ButtonContainer className="w-mw992-100">
+                        Quay lại cửa hàng
+                      </ButtonContainer>
                     </Link>
                     <Link to="/cart">
                       {inCart ? (
-                        <ButtonContainer cart>
+                        <ButtonContainer cart className="w-mw992-100">
                           Đã có trong giỏ hàng
                         </ButtonContainer>
                       ) : (
                         <ButtonContainer
+                          className="w-mw992-100"
                           cart
                           onClick={() => {
                             value.addToCart(id);

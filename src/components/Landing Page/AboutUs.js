@@ -3,21 +3,23 @@ import { Link } from "react-router-dom";
 import useVisible from "../../customHook/useVisible";
 
 function AboutUs() {
-
   const visible = useVisible("aboutus");
 
   return (
     <div id="aboutus">
       <div className="container">
         <div className="row gx-0 align-items-center">
-          <div className={`col-lg-6 p-0 aboutus-img ${visible ? 'fade-left' : ''}`} >
+          <div
+            className={`col-lg-6 p-0 aboutus-img ${visible ? "fade-left" : ""}`}
+          >
             <img
+              loading="lazy"
               src="../image/aboutus-img.webp"
               alt="about us img"
               className="w-100"
             />
           </div>
-          <div className={`col-lg-6 p-0 ${visible ? 'fade-right' : ''}`}>
+          <div className={`col-lg-6 p-0 ${visible ? "fade-right" : ""}`}>
             <div className="aboutus-box bg-light p-4 p-lg-5 ">
               <div className="text-center">
                 <h1 className="text-uppercase display-6 fw-bold mb-2">

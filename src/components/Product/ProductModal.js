@@ -23,6 +23,7 @@ export default class ProductModal extends Component {
                       className="col-8 mx-auto mt-5 col-md-6 col-lg-6 text-center p-4"
                     >
                       <img
+                        loading="lazy"
                         src={img}
                         className="img-fluid"
                         alt="product"
@@ -31,17 +32,24 @@ export default class ProductModal extends Component {
                         }}
                       />
                       <h5 className="mb-2">{title}</h5>
-                      <h5 className="text-muted mb-4">Giá : ${price}</h5>
+                      <h5 className="text-muted mb-4">Giá: {price} vnđ</h5>
                       <Link to="/product">
-                        <ButtonContainer onClick={() => closeModal()}>
+                        <ButtonContainer
+                          className="w-mw992-100"
+                          onClick={() => closeModal()}
+                        >
                           Quay lại cửa hàng
                         </ButtonContainer>
                       </Link>
                       <Link to="/cart">
-                        <ButtonContainer cart onClick={() => {
-                          value.addToCart(id)
-                          closeModal()
-                        }}>
+                        <ButtonContainer
+                          className="w-mw992-100"
+                          cart
+                          onClick={() => {
+                            value.addToCart(id);
+                            closeModal();
+                          }}
+                        >
                           Thêm vào giỏ hàng
                         </ButtonContainer>
                       </Link>

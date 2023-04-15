@@ -8,8 +8,12 @@ export default class Header extends Component {
   render() {
     return (
       <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5 justify-content-between">
-        <Link to="/" className="d-flex align-items-center text-decoration-none ms-2 ms-sm-0">
+        <Link
+          to="/"
+          className="d-flex align-items-center text-decoration-none ms-2 ms-sm-0"
+        >
           <img
+            loading="lazy"
             src={logo}
             alt="logo"
             className="navbar-brand"

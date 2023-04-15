@@ -17,7 +17,12 @@ export default class Product extends Component {
                 onClick={() => value.handleDetail(id)}
               >
                 <Link to="/details">
-                  <img src={img} alt="product" className="card-img-top" />
+                  <img
+                    loading="lazy"
+                    src={img}
+                    alt="product"
+                    className="card-img-top"
+                  />
                 </Link>
                 <button
                   className="cart-btn"
@@ -62,8 +67,7 @@ export default class Product extends Component {
                 fontSize: "14px",
               }}
             >
-              <span className="me-1">$</span>
-              {price}
+              <span className="me-1">{`${price} vnđ`}</span>
             </h5>
           </div>
         </div>

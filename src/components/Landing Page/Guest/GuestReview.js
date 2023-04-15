@@ -4,7 +4,13 @@ import Slider from "react-slick";
 
 const starImgSrc = "/icon/star.svg";
 const starImgx5 = Array.from({ length: 5 }, (_, index) => (
-  <img key={index} src={starImgSrc} alt="star" style={{ margin: "0 5px" }} />
+  <img
+    loading="lazy"
+    key={index}
+    src={starImgSrc}
+    alt="star"
+    style={{ margin: "0 5px" }}
+  />
 ));
 
 function GuestReview() {
@@ -60,6 +66,7 @@ function GuestReview() {
                     }}
                   >
                     <img
+                      loading="lazy"
                       src={src}
                       alt="guest-review"
                       style={{ width: "100%" }}

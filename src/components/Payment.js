@@ -57,6 +57,7 @@ function Payment() {
                 >
                   <div className="w-100 h-100 d-flex justify-content-center align-items-center">
                     <img
+                      loading="lazy"
                       className="w-50"
                       src="../image/payment.png"
                       alt="Thanh toán"

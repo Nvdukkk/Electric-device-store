@@ -7,6 +7,7 @@ export default function CartItem({ item, value }) {
     <div className="row my-2 text-center">
       <div className="col-10 mx-auto col-lg-2 d-flex align-items-center justify-content-center border-top pt-3">
         <img
+          loading="lazy"
           src={img}
           alt="product"
           style={{ width: "5rem", height: "5rem" }}
@@ -14,11 +15,11 @@ export default function CartItem({ item, value }) {
         />
       </div>
       <div className="col-10 mx-auto col-lg-2 d-flex align-items-center justify-content-center border-top pt-3">
-        <span className="d-lg-none">product: </span>
-        {title}
+        <span className="d-lg-none">{`Tên sản phẩm: ${title}`}</span>
+        
       </div>
       <div className="col-10 mx-auto col-lg-2 d-flex align-items-center justify-content-center border-top pt-3">
-        <span className="d-lg-none">Giá: </span>${price}
+        <span className="d-lg-none">{`Giá: ${price} vnđ`}</span>
       </div>
       <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0 d-flex align-items-center justify-content-center border-top pt-3">
         <div className="d-flex justify-content-center">
@@ -39,7 +40,7 @@ export default function CartItem({ item, value }) {
         </div>
       </div>
       <div className="col-10 mx-auto col-lg-2 d-flex align-items-center justify-content-center border-top pt-3">
-        <strong>${total}</strong>
+        <strong>{total} vnđ</strong>
       </div>
     </div>
   );

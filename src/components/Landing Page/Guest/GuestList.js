@@ -62,7 +62,7 @@ function GuestList() {
           {GUEST_LIST.map(({ id, src }) => (
             <div key={id} className="d-flex justify-content-center ">
               <div className="guest-box-list">
-                <img src={src} alt="guest-list" />
+                <img loading="lazy" src={src} alt="guest-list" />
               </div>
             </div>
           ))}
