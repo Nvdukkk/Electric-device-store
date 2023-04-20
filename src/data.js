@@ -1,8 +1,8 @@
-
 export const storeProducts = [
   {
     id: 1,
-    title: "Google Pixel - Black",
+    category: 'bongden',
+    title: "Bóng đèn Rạng Đông 1",
     img: "img/product-1.png",
     price: 10000,
     company: "GOOGLE",
@@ -13,7 +13,8 @@ export const storeProducts = [
   },
   {
     id: 2,
-    title: "Samsung S7",
+    category: 'bongden',
+    title: "Bóng đèn Rạng Đông 2",
     img: "img/product-2.png",
     price: 16000,
     company: "SAMSUNG",
@@ -24,76 +25,160 @@ export const storeProducts = [
   },
   {
     id: 3,
-    title: "HTC 10 - Black",
+    category: 'bongden',
+    title: "Bóng đèn Rạng Đông 3",
     img: "img/product-3.png",
     price: 8000,
     company: "htc",
-    info:
-      "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    info: "Miêu tả bóng đèn 1",
     inCart: false,
     count: 0,
     total: 0
   },
   {
     id: 4,
-    title: "HTC 10 - White",
+    category: 'ongnuoc',
+    title: "Dây điện nano 1",
     img: "img/product-4.png",
     price: 18000,
     company: "htc",
-    info:
-      "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    info: "Miêu tả bóng đèn 1",
     inCart: false,
     count: 0,
     total: 0
   },
   {
     id: 5,
-    title: "HTC Desire 626s",
+    category: 'ongnuoc',
+    title: "Dây điện nano 2",
     img: "img/product-5.png",
     price: 24000,
     company: "htc",
-    info:
-      "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    info: "Miêu tả bóng đèn 1",
     inCart: false,
     count: 0,
     total: 0
   },
   {
     id: 6,
-    title: "Vintage Iphone",
+    category: 'ongnuoc',
+    title: "Dây điện nano 3",
     img: "img/product-6.png",
     price: 17000,
     company: "apple",
-    info:
-      "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    info: "Miêu tả bóng đèn 1",
     inCart: false,
     count: 0,
     total: 0
   },
   {
     id: 7,
+    category: 'daydien',
     title: "Iphone 7",
     img: "img/product-7.png",
     price: 30000,
     company: "apple",
-    info:
-      "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    info: "Miêu tả bóng đèn 1",
     inCart: false,
     count: 0,
     total: 0
   },
   {
     id: 8,
-    title: "Smashed Iphone",
+    category: 'daydien',
+    title: "Cáp quang 1",
     img: "img/product-8.png",
     price: 2000,
     company: "apple",
-    info:
-      "Lorem ipsum dolor amet offal butcher quinoa sustainable gastropub, echo park actually green juice sriracha paleo. Brooklyn sriracha semiotics, DIY coloring book mixtape craft beer sartorial hella blue bottle. Tote bag wolf authentic try-hard put a bird on it mumblecore. Unicorn lumbersexual master cleanse blog hella VHS, vaporware sartorial church-key cardigan single-origin coffee lo-fi organic asymmetrical. Taxidermy semiotics celiac stumptown scenester normcore, ethical helvetica photo booth gentrify.",
+    info: "Miêu tả bóng đèn 1",
     inCart: false,
     count: 0,
     total: 0
-  }
+  },
+  {
+    id: 9,
+    category: 'daydien',
+    title: "Cáp quang 1",
+    img: "img/product-8.png",
+    price: 2000,
+    company: "apple",
+    info: "Miêu tả bóng đèn 1",
+    inCart: false,
+    count: 0,
+    total: 0
+  },
+  {
+    id: 10,
+    category: 'capquang',
+    title: "Cáp quang 1",
+    img: "img/product-8.png",
+    price: 2000,
+    company: "apple",
+    info: "Miêu tả bóng đèn 1",
+    inCart: false,
+    count: 0,
+    total: 0
+  },
+  {
+    id: 11,
+    category: 'capquang',
+    title: "Cáp quang 1",
+    img: "img/product-8.png",
+    price: 2000,
+    company: "apple",
+    info: "Miêu tả bóng đèn 1",
+    inCart: false,
+    count: 0,
+    total: 0
+  },
+  {
+    id: 12,
+    category: 'capquang',
+    title: "Cáp quang 1",
+    img: "img/product-8.png",
+    price: 2000,
+    company: "apple",
+    info: "Miêu tả bóng đèn 1",
+    inCart: false,
+    count: 0,
+    total: 0
+  },
+  {
+    id: 13,
+    category: 'capquang',
+    title: "Cáp quang 1",
+    img: "img/product-8.png",
+    price: 2000,
+    company: "apple",
+    info: "Miêu tả bóng đèn 1",
+    inCart: false,
+    count: 0,
+    total: 0
+  },
+  {
+    id: 14,
+    category: 'capquang',
+    title: "Cáp quang 1",
+    img: "img/product-8.png",
+    price: 2000,
+    company: "apple",
+    info: "Miêu tả bóng đèn 1",
+    inCart: false,
+    count: 0,
+    total: 0
+  },
+  {
+    id: 15,
+    category: 'capquang',
+    title: "Cáp quang 1",
+    img: "img/product-8.png",
+    price: 2000,
+    company: "apple",
+    info: "Miêu tả bóng đèn 1",
+    inCart: false,
+    count: 0,
+    total: 0
+  },
 ];
 
 

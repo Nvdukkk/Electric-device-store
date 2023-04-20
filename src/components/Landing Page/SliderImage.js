@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
+
 function SliderImage() {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);

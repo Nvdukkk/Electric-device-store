@@ -39,7 +39,6 @@ export default class Product extends Component {
                         fontSize: "14px",
                       }}
                     >
-                      {" "}
                       Đã có trong giỏ hàng
                     </p>
                   ) : (

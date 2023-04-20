@@ -15,11 +15,10 @@ export default function CartItem({ item, value }) {
         />
       </div>
       <div className="col-10 mx-auto col-lg-2 d-flex align-items-center justify-content-center border-top pt-3">
-        <span className="d-lg-none">{`Tên sản phẩm: ${title}`}</span>
-        
+        <span>{title}</span>
       </div>
       <div className="col-10 mx-auto col-lg-2 d-flex align-items-center justify-content-center border-top pt-3">
-        <span className="d-lg-none">{`Giá: ${price} vnđ`}</span>
+        <span>{price}</span>
       </div>
       <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0 d-flex align-items-center justify-content-center border-top pt-3">
         <div className="d-flex justify-content-center">

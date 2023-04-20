@@ -14,7 +14,6 @@ function CardVisit() {
             <div
               className="col medium-6 small-12 large-3 p-0  m-2 card-visit"
               key={id}
-              style={{}}
             >
               <div className="text-center">
                 <div
