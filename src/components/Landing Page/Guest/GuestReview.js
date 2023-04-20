@@ -23,6 +23,14 @@ function GuestReview() {
     dots: true,
     fade: true,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 990,
+        settings: {
+          arrows: false,
+        },
+      },
+    ]
   };
   return (
     <div

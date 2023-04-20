@@ -1,22 +1,30 @@
-export const PRODUCT_TYPE = [
+export const PRODUCT_CATEGORY = [
   {
-    id: 1,
     category: "bongden",
     title: "Bóng đèn",
   },
   {
-    id: 2,
     category: "ongnuoc",
     title: "Ống nước",
   },
   {
-    id: 3,
     category: "daydien",
     title: "Dây điện",
   },
   {
-    id: 4,
     category: "capquang",
     title: "Cáp quang",
+  },
+  {
+    category: "capdienluc",
+    title: "Cáp điện lực",
+  },
+  {
+    category: "daytran",
+    title: "Dây trần",
+  },
+  {
+    category: "ongpvc",
+    title: "Ống pvc",
   },
 ];

@@ -1,6 +1,7 @@
 import { GUEST_LIST } from "./constant";
 import React from "react";
 import Slider from "react-slick";
+
 function GuestList() {
   const settingSlider = {
     infinite: true,

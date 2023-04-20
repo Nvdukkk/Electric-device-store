@@ -244,14 +244,6 @@ a {
   fill: #efefef;
 }
 
-/* .hover-up {
-  transition: all ease 0.3s;
-}
-
-.hover-up:hover {
-  transform: translateY(-15px);
-} */
-
 .fade-left {
   animation-name: fadeInLeft;
   animation-duration: 1s;
@@ -265,10 +257,6 @@ a {
 .fade-bottom {
   animation-name: fadeInBottom;
   animation-duration: 1s;
-}
-
-.slick-arrow {
-  /* background-color: red !important; */
 }
 
 .slick-prev:before,
@@ -385,9 +373,6 @@ a {
   .guest-box-list img {
     width: 80px;
     height: 80px;
-  }
-  .slick-arrow {
-    display: none !important;
   }
   .w-mw768-75 {
     width: 75%;
