@@ -4,7 +4,7 @@ import { ProductConsumer } from "../../context";
 import { ButtonContainer } from "../Button";
 import { Link } from "react-router-dom";
 
-function ProductModal() {
+export default function ProductModal() {
   return (
     <ProductConsumer>
       {(value) => {
@@ -63,7 +63,7 @@ function ProductModal() {
   );
 }
 
-export default ProductModal;
+
 
 const ModalContainer = styled.div`
   position: fixed;

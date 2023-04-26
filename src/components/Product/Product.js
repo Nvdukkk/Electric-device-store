@@ -1,78 +1,76 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../../context";
 import PropTypes from "prop-types";
 
-export default class Product extends Component {
-  render() {
-    const { id, title, img, price, inCart } = this.props.product;
-    return (
-      <ProductWrapper className="col-6 mx-auto h-50 h-lg-100 col-lg-3 my-3">
-        <div className="card">
-          <ProductConsumer>
-            {(value) => (
-              <div
-                className="img-container p-4"
-                onClick={() => value.handleDetail(id)}
+export default function Product(props) {
+  const { id, title, img, price, inCart } = props.product;
+  return (
+    <ProductWrapper className="col-6 h-50 h-lg-100 col-lg-3 my-3">
+      <div className="card">
+        <ProductConsumer>
+          {(value) => (
+            <div
+              className="img-container p-4"
+              onClick={() => value.handleDetail(id)}
+            >
+              <Link to="/details">
+                <img
+                  loading="lazy"
+                  src={img}
+                  alt="product"
+                  className="card-img-top"
+                />
+              </Link>
+              <button
+                className="cart-btn"
+                disabled={inCart ? true : false}
+                onClick={() => {
+                  value.openModal(id);
+                }}
               >
-                <Link to="/details">
-                  <img
-                    loading="lazy"
-                    src={img}
-                    alt="product"
-                    className="card-img-top"
-                  />
-                </Link>
-                <button
-                  className="cart-btn"
-                  disabled={inCart ? true : false}
-                  onClick={() => {
-                    value.openModal(id);
-                  }}
-                >
-                  {inCart ? (
-                    <p
-                      className="mb-0"
-                      disabled
-                      style={{
-                        fontSize: "14px",
-                      }}
-                    >
-                      Đã có trong giỏ hàng
-                    </p>
-                  ) : (
-                    <i className="fab fa-shopify" />
-                  )}
-                </button>
-              </div>
-            )}
-          </ProductConsumer>
+                {inCart ? (
+                  <p
+                    className="mb-0"
+                    disabled
+                    style={{
+                      fontSize: "14px",
+                    }}
+                  >
+                    Đã có trong giỏ hàng
+                  </p>
+                ) : (
+                  <i className="fab fa-shopify" />
+                )}
+              </button>
+            </div>
+          )}
+        </ProductConsumer>
 
-          <div className="card-footer d-flex flex-column align-items-center justify-content-center">
-            <p
-              className="product-limit-text"
-              style={{
-                fontSize: "14px",
-                fontWeight: "500",
-                marginBottom: "5px",
-              }}
-            >
-              {title}
-            </p>
-            <h5
-              className="mb-0"
-              style={{
-                fontSize: "14px",
-              }}
-            >
-              <span className="me-1">{`${price} vnđ`}</span>
-            </h5>
-          </div>
+        <div className="card-footer d-flex flex-column align-items-center justify-content-center">
+          <p
+            className="product-limit-text"
+            style={{
+              fontSize: "14px",
+              fontWeight: "500",
+              marginBottom: "5px",
+            }}
+          >
+            {title}
+          </p>
+          <h5
+            className="mb-0"
+            style={{
+              fontSize: "14px",
+            }}
+          >
+            <span className="me-1">{`${price} vnđ`}</span>
+          </h5>
         </div>
-      </ProductWrapper>
-    );
-  }
+      </div>
+    </ProductWrapper>
+  );
 }
 
 Product.propTypes = {

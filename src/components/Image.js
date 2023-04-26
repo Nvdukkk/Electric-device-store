@@ -1,7 +1,6 @@
 import React from "react";
 
 function Image(props) {
-  // eslint-disable-next-line jsx-a11y/alt-text
   return (
     <div className={`ratio ${props.ratio || "ratio-sm-1x2 ratio-md-4x3 ratio-21x9"}`}>
       <div>

@@ -18,7 +18,7 @@ function SliderImage() {
     
   };
   return (
-    <header id="slider">
+    <div id="slider">
       <Slider {...settingSlider}>
         {BANNER_SLIDER.map((item, index) => (
           <div key={index} className="position-relative">
@@ -44,7 +44,7 @@ function SliderImage() {
           </div>
         ))}
       </Slider>
-    </header>
+    </div>
   );
 }
 

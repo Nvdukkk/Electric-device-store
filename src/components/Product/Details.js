@@ -3,7 +3,7 @@ import { ProductConsumer } from "../../context";
 import { Link } from "react-router-dom";
 import { ButtonContainer } from "../Button";
 
-function Detail() {
+export default function Detail() {
   return (
     <ProductConsumer>
       {(value) => {
@@ -68,4 +68,3 @@ function Detail() {
   );
 }
 
-export default Detail;

@@ -51,7 +51,7 @@ export default function ProductList() {
         <div className="container">
           <Slider className="gap-2" {...settingSlider}>
             {PRODUCT_CATEGORY.map(({ title, category }, index) => (
-              <div className="d-flex justify-content-center">
+              <div key={index} className="d-flex justify-content-center">
                 <button
                   key={index}
                   onClick={() => setActiveTab(category)}
@@ -68,7 +68,7 @@ export default function ProductList() {
           <div
             className="row mt-4"
             style={{
-              minHeight: "47.8vh",
+              minHeight: "50vh",
             }}
           >
             <ProductConsumer>
