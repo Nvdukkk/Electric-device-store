@@ -6,7 +6,7 @@ function useVisible(targetId) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const targetPosition = document.getElementById(targetId).offsetHeight - 100;
+      const targetPosition = document.getElementById(targetId).getBoundingClientRect().top + 50 ;
       if (scrollPosition >= targetPosition) {
         setVisible(true);
       }

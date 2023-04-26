@@ -15,12 +15,12 @@ export default class Card extends Component {
             const { cart } = value;
             if (cart.length > 0) {
               return (
-                <React.Fragment>
+                <>
                   <Title title="Giỏ hàng" />
                   <CartColumns  />
                   <CartList value={value} />
                   <CartTotals value={value} history={this.props.history} />
-                </React.Fragment>
+                </>
               );
             } else {
               return <EmptyCart />;

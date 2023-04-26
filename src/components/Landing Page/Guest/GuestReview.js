@@ -30,7 +30,7 @@ function GuestReview() {
           arrows: false,
         },
       },
-    ]
+    ],
   };
   return (
     <div
@@ -54,16 +54,7 @@ function GuestReview() {
           <Slider {...settingSlider}>
             {GUEST_REVIEW.map(({ id, src, name, position, review }) => (
               <div key={id}>
-                <div
-                  className="d-flex flex-column align-items-center pt-5 pb-3 px-5"
-                  style={
-                    {
-                      // borderRadius: "20px",
-                      // boxShadow: "0 0 20px rgba(0,0,0,.1)",
-                      // height: "100%",
-                    }
-                  }
-                >
+                <div className="d-flex flex-column align-items-center pt-5 pb-3 px-5">
                   <div
                     style={{
                       width: "80px",

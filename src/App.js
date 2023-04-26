@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductList from "./components/Product/ProductList";
 import Details from "./components/Product/Details";
@@ -14,7 +13,7 @@ import ComingSoon from "./components/ComingSoon";
 
 function App() {
   return (
-    <React.Fragment>
+    <>
       <Header />
       <Switch>
         <Route exact path="/" component={LandingPage} />
@@ -26,7 +25,7 @@ function App() {
         <Route component={NotFound} />
       </Switch>
       <ProductModal />
-    </React.Fragment>
+    </>
   );
 }
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function CartTotals({ value }) {
   const { cartSubTotal, cartDiscount, cartTotal, clearCart } = value;
   return (
-    <React.Fragment>
+    <>
       <div className="container">
         <div className="row">
           <div className="col-10 mt-2 ms-sm-5 ms-md-auto col-sm-8 text-end">
@@ -40,6 +40,6 @@ export default function CartTotals({ value }) {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }

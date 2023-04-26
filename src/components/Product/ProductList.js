@@ -45,7 +45,7 @@ export default function ProductList() {
     ],
   };
   return (
-    <React.Fragment>
+    <>
       <Title title="Cửa hàng" />
       <div className="my-5">
         <div className="container">
@@ -84,6 +84,6 @@ export default function ProductList() {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }

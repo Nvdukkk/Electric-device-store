@@ -1,20 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import SliderImage from "./SliderImage";
 import CardVisit from "./CardVisit";
 import Guest from "./Guest/Guest";
-import Footer from "../Footer/Footer";
+import Footer from "./Footer";
 import AboutUs from "./AboutUs";
 
-export default class LandingPage extends Component {
-  render() {
-    return (
-      <div>
-        <SliderImage />
-        <CardVisit />
-        <AboutUs />
-        <Guest />
-        <Footer />
-      </div>
-    );
-  }
+export default function LandingPage() {
+  return (
+    <div>
+      <SliderImage />
+      <CardVisit />
+      <AboutUs />
+      <Guest />
+      <Footer />
+    </div>
+  );
 }
+
