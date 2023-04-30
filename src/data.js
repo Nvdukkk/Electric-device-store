@@ -1,12 +1,16 @@
 export const storeProducts = [
   {
     id: 1,
-    category: 'bongden',
-    title: "Bóng đèn Rạng Đông 1",
+    category: 'daydien',
+    title: "DÂY OVAN MỀM VCTFK 2×4.0",
     img: "img/product-1.png",
-    price: 10000,
-    company: "GOOGLE",
-    info: "sản phẩm 1",
+    price: 17641,
+    company: "CadiSun",
+    info: "+ Ruột dẫn: Đồng ủ mềm trong môi trường khí trơ.
++ Số lõi: 2
++ Kết cấu: Nhiều sợi bện tròn cấp 5, cấp 6.
++ Mặt cắt danh định: 4.0 mm2
++ Điện áp danh định: 300/500V",
     inCart: false,
     count: 0,
     total: 0
