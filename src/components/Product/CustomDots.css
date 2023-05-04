@@ -1,0 +1,8 @@
+.pb-4 .slick-dots li:hover,
+.pb-4 .slick-dots li.slick-active {
+  transform: scale(1.1);
+}
+
+.pb-4 .slick-dots li.slick-active {
+  border: 1px solid black;
+}

@@ -24,7 +24,7 @@ function SliderImage() {
           <div key={index} className="position-relative">
             <Image src={item.img} />
             <div className="position-absolute top-50 start-50 translate-middle text-white text-center glow">
-              <h1 className="fs-45">
+              <h1 className="fs-45 ">
                 {item.title}
               </h1>
               <p className="mt-4">{item.content}</p>

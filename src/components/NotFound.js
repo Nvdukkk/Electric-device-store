@@ -11,11 +11,7 @@ export default function NotFound() {
           <div className="position-absolute text-white top-50 translate-middle-y">
             <h1 className="heading_404 text-center p-0">404</h1>
             <p className="subheading_404 text-center my-0 mx-auto">
-              Looks like the page{" "}
-              <span className="text-danger">
-                {this.props.location.pathname}
-              </span>{" "}
-              you were looking for is no longer here.
+              Looks like the page you were looking for is no longer here.
             </p>
           </div>
         </div>

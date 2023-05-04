@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { ProductConsumer } from "../../context";
 import { ButtonContainer } from "../Button";
 import { Link } from "react-router-dom";
+import ReactModal from "react-modal";
+
 
 export default function ProductModal() {
   return (
@@ -14,13 +15,14 @@ export default function ProductModal() {
           return null;
         } else {
           return (
-            <ModalContainer>
+            <ReactModal
+              isOpen={modalOpen}
+              contentLabel="onRequestClose"
+              onRequestClose={() => closeModal()}
+            >
               <div className="container">
                 <div className="row">
-                  <div
-                    id="modal"
-                    className="col-8 mx-auto mt-5 col-md-6 col-lg-6 text-center p-4"
-                  >
+                  <div className=" text-center ">
                     <img
                       loading="lazy"
                       src={img}
@@ -55,27 +57,19 @@ export default function ProductModal() {
                   </div>
                 </div>
               </div>
-            </ModalContainer>
+            </ReactModal>
           );
         }
       }}
     </ProductConsumer>
   );
 }
+ReactModal.setAppElement("#root");
 
-
-
-const ModalContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  #modal {
-    background: var(--mainWhite);
-  }
-`;
+ReactModal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 0.3)";
+ReactModal.defaultStyles.overlay.zIndex = "9999";
+ReactModal.defaultStyles.overlay.display = "flex";
+ReactModal.defaultStyles.overlay.alignItems = "center";
+ReactModal.defaultStyles.overlay.justifyContent = "center";
+ReactModal.defaultStyles.content.inset = "auto";
+ReactModal.defaultStyles.content.margin = "0 20px";

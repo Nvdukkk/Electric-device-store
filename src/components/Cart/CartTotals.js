@@ -7,10 +7,10 @@ export default function CartTotals({ value }) {
     <>
       <div className="container">
         <div className="row">
-          <div className="col-10 mt-2 ms-sm-5 ms-md-auto col-sm-8 text-end">
-            <Link to="/pay">
+          <div className="col-12 mt-2 text-end">
+            <Link to="/checkout">
               <button
-                className="btn btn-outline-success mb-3 px-2 px-sm-5 me-md-3 w-mw768-75"
+                className="btn btn-outline-success mb-1 mb-md-3 px-2 px-sm-5 me-md-3 w-mw768-75"
                 type="button"
               >
                 Đặt hàng

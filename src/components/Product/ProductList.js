@@ -4,6 +4,8 @@ import Title from "../Title";
 import { ProductConsumer } from "../../context";
 import { PRODUCT_CATEGORY } from "./constant";
 import Slider from "react-slick";
+import "./CustomDots.css";
+import ProductModal from "./ProductModal";
 
 export default function ProductList() {
   const [activeTab, setActiveTab] = useState("bongden");
@@ -13,6 +15,9 @@ export default function ProductList() {
     slidesToShow: 7,
     arrows: false,
     dots: true,
+    customPaging: function (i) {
+      return <h6>{i + 1}</h6>;
+    },
     responsive: [
       {
         breakpoint: 1200,
@@ -36,7 +41,7 @@ export default function ProductList() {
         },
       },
       {
-        breakpoint: 400,
+        breakpoint: 500,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -49,16 +54,15 @@ export default function ProductList() {
       <Title title="Cửa hàng" />
       <div className="my-5">
         <div className="container">
-          <Slider className="gap-2" {...settingSlider}>
+          <Slider className="pb-4" {...settingSlider}>
             {PRODUCT_CATEGORY.map(({ title, category }, index) => (
               <div key={index} className="d-flex justify-content-center">
                 <button
-                  key={index}
                   onClick={() => setActiveTab(category)}
                   className={`py-2 px-2 ${
                     activeTab === category ? "" : "border"
                   } `}
-                  style={{ width: "120px" }}
+                  style={{ width: "150px", height: "70px" }}
                 >
                   {title}
                 </button>
@@ -66,7 +70,7 @@ export default function ProductList() {
             ))}
           </Slider>
           <div
-            className="row mt-4"
+            className="row mt-5 border-top border-2 border-dark border-solid border-xl-0"
             style={{
               minHeight: "50vh",
             }}
@@ -84,6 +88,7 @@ export default function ProductList() {
           </div>
         </div>
       </div>
+      <ProductModal />
     </>
   );
 }

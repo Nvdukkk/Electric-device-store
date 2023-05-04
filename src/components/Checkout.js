@@ -2,8 +2,18 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { ProductConsumer } from "../context";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-function Payment() {
+import { useNavigate } from "react-router-dom";
+const toastSuccess = () =>
+  toast.success("Đặt hàng thành công!", {
+    pauseOnHover: false,
+  });
+export default function Checkout() {
+  const navigate = useNavigate()
   const {
     register,
     handleSubmit,
@@ -20,8 +30,9 @@ function Payment() {
       "https://sheet.best/api/sheets/eb5ec9af-83b0-431b-8f6d-75ba9973d95a",
       mergeData
     );
-    alert("Đặt hàng thành công");
+    toastSuccess();
     reset();
+    navigate("/product")
   };
   return (
     <ProductConsumer>
@@ -42,7 +53,7 @@ function Payment() {
             className="d-flex justify-content-center align-items-center w-100"
             style={{
               minHeight: "89.6vh",
-              backgroundImage: 'url("../image/payment-background.webp")',
+              backgroundImage: 'url("../image/checkout-background.webp")',
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -60,7 +71,7 @@ function Payment() {
                     <img
                       loading="lazy"
                       className="w-50"
-                      src="../image/payment.png"
+                      src="../image/checkout.png"
                       alt="Thanh toán"
                       style={{
                         transform: "rotateY(180deg)",
@@ -139,11 +150,10 @@ function Payment() {
                 </div>
               </div>
             </div>
+            <ToastContainer position="bottom-right" />
           </div>
         );
       }}
     </ProductConsumer>
   );
 }
-
-export default Payment;

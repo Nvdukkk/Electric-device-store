@@ -27,7 +27,7 @@ export const CARD_VISIT = [
   
 export const BANNER_SLIDER = [
   {
-    title: 'ĐẠI LÝ PHÂN PHỐI ĐỒ ĐIỆN',
+    title: 'ĐẠI LÝ PHÂN PHỐI',
     content: 'Top 1 Việt Nam',
     img: '/image/banner-slide-1.jpg',
   },

@@ -4,27 +4,28 @@ export const PRODUCT_CATEGORY = [
     title: "Bóng đèn",
   },
   {
-    category: "ongnuoc",
-    title: "Ống nước",
+    category: "ongluondaydiensino",
+    title: "Ống luồn dây điện Sino",
   },
   {
-    category: "daydien",
-    title: "Dây điện",
+    category: "daycapdiencadivi",
+    title: "Dây cáp điện CADIVI",
+  },
+  
+  {
+    category: "daycapdiencadisun",
+    title: "Dây cáp điện CADISUN",
   },
   {
-    category: "capquang",
-    title: "Cáp quang",
+    category: "thietbidienpanasonic",
+    title: "Thiết bị điện Panasonic",
   },
   {
-    category: "capdienluc",
-    title: "Cáp điện lực",
+    category: "daucoss",
+    title: "Đầu coss",
   },
   {
-    category: "daytran",
-    title: "Dây trần",
-  },
-  {
-    category: "ongpvc",
-    title: "Ống pvc",
+    category: "sanphamkhac",
+    title: "Sản phẩm khác",
   },
 ];
