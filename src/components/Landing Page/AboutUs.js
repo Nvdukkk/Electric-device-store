@@ -9,14 +9,12 @@ function AboutUs() {
     <div id="aboutus">
       <div className="container">
         <div className="row gx-0 align-items-center">
-          <div
-            className={`col-lg-6 p-0 aboutus-img ${visible ? "fade-left" : ""}`}
-          >
+          <div className="col-lg-6 p-0 aboutus-img">
             <img
               loading="lazy"
               src="../image/aboutus-img.webp"
               alt="about us img"
-              className="w-100"
+              className={`w-100 ${visible ? "fade-left" : ""}`}
             />
           </div>
           <div className={`col-lg-6 p-0 ${visible ? "fade-right" : ""}`}>

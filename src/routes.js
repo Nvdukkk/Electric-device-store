@@ -7,6 +7,7 @@ import LandingPage from "./components/Landing Page/LandingPage";
 import Checkout from "./components/Checkout";
 import ComingSoon from "./components/ComingSoon";
 import DefaultLayout from "./components/DefaultLayout";
+import OrderSuccess from "./components/OrderSucces";
 import { useRoutes } from "react-router-dom";
 
 const childrenRoutes = [
@@ -16,6 +17,7 @@ const childrenRoutes = [
   { path: "/cart", element: <Cart /> },
   { path: "/checkout", element: <Checkout /> },
   { path: "/comingsoon", element: <ComingSoon /> },
+  { path: "/order-success", element: <OrderSuccess />},
   { path: "*", element: <NotFound />}
 ];
 

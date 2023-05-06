@@ -1,26 +1,22 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { ProductConsumer } from "../context";
-import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
+import { ProductConsumer, ProductContext } from "../context";
 import { useNavigate } from "react-router-dom";
-const toastSuccess = () =>
-  toast.success("Đặt hàng thành công!", {
-    pauseOnHover: false,
-  });
+import { useContext } from "react";
+
 export default function Checkout() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const context = useContext(ProductContext);
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({});
-
+  
   let cartData = { title: "", count: "" };
 
   const onSubmit = (inputData) => {
@@ -30,9 +26,9 @@ export default function Checkout() {
       "https://sheet.best/api/sheets/eb5ec9af-83b0-431b-8f6d-75ba9973d95a",
       mergeData
     );
-    toastSuccess();
     reset();
-    navigate("/product")
+    context.clearCart();
+    navigate("/order-success");
   };
   return (
     <ProductConsumer>
@@ -150,7 +146,6 @@ export default function Checkout() {
                 </div>
               </div>
             </div>
-            <ToastContainer position="bottom-right" />
           </div>
         );
       }}

@@ -89,6 +89,7 @@ export default function ProductList() {
         </div>
       </div>
       <ProductModal />
+
     </>
   );
 }

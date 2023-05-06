@@ -6,18 +6,7 @@ const ProductContext = createContext();
 function ProductProvider({ children }) {
   const [products, setProducts] = useState(storeProducts);
   const [detailProduct, setDetailProduct] = useState(storeProducts);
-  const [cart, setCart] = useState([{
-    id: 1,
-    category: 'bongden',
-    title: "DÂY OVAN MỀM VCTFK 2×4.0",
-    img: "img/product-1.png",
-    price: 17641,
-    company: "CadiSun",
-    info: "+ Ruột dẫn: Đồng ủ mềm trong môi trường khí trơ",
-    inCart: true,
-    count: 1,
-    total: 0
-  },]);
+  const [cart, setCart] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProduct, setModalProduct] = useState(storeProducts);
   const [cartSubTotal, setCartSubTotal] = useState(0);
