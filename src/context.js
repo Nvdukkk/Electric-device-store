@@ -12,6 +12,7 @@ function ProductProvider({ children }) {
   const [cartSubTotal, setCartSubTotal] = useState(0);
   const [cartDiscount, setCartDiscount] = useState(0);
   const [cartTotal, setCartTotal] = useState(0);
+  const [isAllowed, setIsAllowed] = useState(false);
 
   const getItem = (id) => {
     const product = products.find((item) => item.id === id);
@@ -33,7 +34,7 @@ function ProductProvider({ children }) {
     setCartSubTotal(subTotal);
     setCartDiscount(discount);
     setCartTotal(total);
-  }
+  };
 
   const addToCart = (id) => {
     const product = products.find((item) => item.id === id);
@@ -46,13 +47,11 @@ function ProductProvider({ children }) {
   const openModal = (id) => {
     const product = getItem(id);
     setModalProduct(product);
-    console.log('open');
     setModalOpen(true);
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    console.log('close');
   };
 
   const increment = (id) => {
@@ -96,6 +95,10 @@ function ProductProvider({ children }) {
   };
 
   const clearCart = () => {
+    let tempCart = [...cart];
+    tempCart.forEach((item) => {
+      item.inCart = false;
+    });
     setCart([]);
     setProducts(() => {
       let tempProducts = [];
@@ -105,11 +108,10 @@ function ProductProvider({ children }) {
       });
       return tempProducts;
     });
-    addTotals();
   };
   useEffect(() => {
     addTotals();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
   return (
@@ -123,6 +125,7 @@ function ProductProvider({ children }) {
         cartSubTotal,
         cartDiscount,
         cartTotal,
+        isAllowed,
         handleDetail,
         addToCart,
         openModal,
@@ -131,6 +134,7 @@ function ProductProvider({ children }) {
         decrement,
         removeItem,
         clearCart,
+        setIsAllowed,
       }}
     >
       {children}

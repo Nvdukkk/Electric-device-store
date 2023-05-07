@@ -9,24 +9,26 @@ export default function Checkout() {
   const navigate = useNavigate();
 
   const context = useContext(ProductContext);
-  
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({});
-  
+
   let cartData = { title: "", count: "" };
 
   const onSubmit = (inputData) => {
+    context.setIsAllowed(true);
+    reset();
+
     const mergeData = Object.assign({}, inputData, cartData);
 
     axios.post(
       "https://sheet.best/api/sheets/eb5ec9af-83b0-431b-8f6d-75ba9973d95a",
       mergeData
     );
-    reset();
     context.clearCart();
     navigate("/order-success");
   };
