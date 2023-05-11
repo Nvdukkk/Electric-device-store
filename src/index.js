@@ -6,6 +6,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ProductProvider } from './context';
 import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import './index.css';
 
 ReactDOM.render(

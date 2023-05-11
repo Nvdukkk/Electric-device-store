@@ -26,7 +26,7 @@ export default function CartTotals({ value }) {
               type="button"
               onClick={() => clearCart()}
             >
-              Xóa tồn bộ
+              Xóa toàn bộ
             </button>
             <h5>
               <span className="me-3 text-uppercase text-bold">

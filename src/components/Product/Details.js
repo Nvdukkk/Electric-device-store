@@ -31,14 +31,14 @@ export default function Detail() {
                   Sản xuất bởi: <span>{company}</span>
                 </h4>
                 <h4 className="text-blue">
-                  <strong>{`Giá: ${price} vnđ`}</strong>
+                  <strong>{`Giá: ${price.toLocaleString('vi-VN')} vnđ`}</strong>
                 </h4>
                 <p className="font-weight-bold mt-3 mb-0">Tổng quan:</p>
                 <p className="text-muted lead">{info}</p>
                 <div className="text-center">
                   <Link to="/product">
                     <ButtonContainer className="w-mw992-100">
-                      Quay lại cửa hàng
+                      Xem thêm sản phẩm
                     </ButtonContainer>
                   </Link>
                   <Link to="/cart">

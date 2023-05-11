@@ -33,7 +33,7 @@ export default function ProductModal() {
                       }}
                     />
                     <h5 className="mb-2">{title}</h5>
-                    <h5 className="text-muted mb-4">Giá: {price} vnđ</h5>
+                    <h5 className="text-muted mb-4">Giá: {price.toLocaleString('vi-VN')} vnđ</h5>
                     <Link to="/product">
                       <ButtonContainer
                         className="w-mw992-100"
