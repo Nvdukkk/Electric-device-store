@@ -4,16 +4,17 @@ import { Link } from "react-router-dom";
 import { ProductConsumer } from "../../context";
 import PropTypes from "prop-types";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { getLocalStorageIncart } from "../../utils";
 
 export default function Product(props) {
-  const { id, title, img, price, inCart } = props.product;
+  const { id, title, img, price } = props.product;
   return (
     <ProductWrapper className="col-6 h-50 col-md-4 h-lg-100 col-lg-3 my-3">
       <ProductConsumer>
         {(value) => (
           <div title={title} className="card relative">
             <Link
-              to="/details"
+              to={`/details/${id}`}
               onClick={() => value.handleDetail(id)}
               className="img-container p-4"
             >
@@ -26,28 +27,28 @@ export default function Product(props) {
             </Link>
             <button
               className="cart-btn"
-              disabled={inCart ? true : false}
+              disabled={getLocalStorageIncart(id)}
               onClick={() => {
                 value.openModal(id);
               }}
             >
-              {inCart ? (
-                <p
-                  className="mb-0"
-                  disabled
+              {getLocalStorageIncart(id) ? (
+                <Link
+                  to="/cart"
+                  className="mb-0 cart-btn-text"
                   style={{
                     fontSize: "14px",
                   }}
                 >
                   Đã có trong giỏ hàng
-                </p>
+                </Link>
               ) : (
                 <i className="fab fa-shopify" />
               )}
             </button>
 
             <Link
-              to="/details"
+              to={`/details/${id}`}
               onClick={() => value.handleDetail(id)}
               className="card-footer d-flex flex-column align-items-center justify-content-center"
             >
@@ -121,18 +122,24 @@ const ProductWrapper = styled.div`
     position: absolute;
     bottom: 71px;
     right: 11px;
-    padding: 0.2rem 0.4rem;
+    padding: 0 0.4rem 0.3rem;
     background: #fff;
     border: 1px solid #000;
-    color: #000;
+    color: black;
     font-size: 1.4rem;
     opacity: 0;
     transition: all 0.3s ease;
   }
-
+  .cart-btn-text {
+    color: black;
+  }
   .cart-btn:hover {
     color: var(--mainWhite);
     background-color: #000;
     cursor: pointer;
+
+    .cart-btn-text {
+      color: var(--mainWhite);
+    }
   }
 `;

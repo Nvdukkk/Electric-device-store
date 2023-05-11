@@ -1,12 +1,20 @@
 import React, { createContext, useEffect, useState } from "react";
 import { storeProducts } from "./data";
-
+import {
+  getCartItemsValues,
+  removeAllLocalStorageItem,
+  removeLocalStorageItem,
+  setLocalStorageCount,
+  setLocalStorageItem,
+  setLocalStorageTotal,
+} from "./utils";
 const ProductContext = createContext();
 
 function ProductProvider({ children }) {
   const [products, setProducts] = useState(storeProducts);
   const [detailProduct, setDetailProduct] = useState(storeProducts);
-  const [cart, setCart] = useState([]);
+  const localStorageValues = getCartItemsValues();
+  const [cart, setCart] = useState(localStorageValues);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProduct, setModalProduct] = useState(storeProducts);
   const [cartSubTotal, setCartSubTotal] = useState(0);
@@ -24,24 +32,23 @@ function ProductProvider({ children }) {
     setDetailProduct(product);
   };
 
-  const addTotals = () => {
-    const subTotal = cart.reduce((a, item) => {
-      return a + item.total;
-    }, 0);
-    const tempDiscount = subTotal * 0.1;
-    const discount = parseFloat(tempDiscount.toFixed(2));
-    const total = subTotal - discount;
-    setCartSubTotal(subTotal);
-    setCartDiscount(discount);
-    setCartTotal(total);
-  };
-
   const addToCart = (id) => {
     const product = products.find((item) => item.id === id);
     product.inCart = true;
     product.count = 1;
     product.total = product.price * product.count;
     setCart([...cart, product]);
+    setLocalStorageItem(id, product);
+    
+  };
+
+  const addTotals = () => {
+    const subTotal = cart.reduce((total, item) => total + item.total, 0);
+    const discount = parseFloat(subTotal * 0.1);
+    const total = subTotal - discount;
+    setCartSubTotal(subTotal.toLocaleString("vi-VN"));
+    setCartDiscount(discount.toLocaleString("vi-VN"));
+    setCartTotal(total.toLocaleString("vi-VN"));
   };
 
   const openModal = (id) => {
@@ -56,25 +63,48 @@ function ProductProvider({ children }) {
 
   const increment = (id) => {
     let tempCart = [...cart];
-    const selectedProduct = tempCart.find((item) => item.id === id);
-    const index = tempCart.indexOf(selectedProduct);
+    const index = tempCart.findIndex((item) => item.id === id);
     const product = tempCart[index];
     product.count = product.count + 1;
     product.total = product.count * product.price;
     setCart(tempCart);
     addTotals();
+    setLocalStorageCount(id, product.count);
+    setLocalStorageTotal(id, product.total);
+  };
+
+  const handleInputChange = (e, id) => {
+    let tempCart = [...cart];
+    const index = tempCart.findIndex((item) => item.id === id);
+    const product = tempCart[index];
+    const inputValue = parseInt(e.target?.value);
+    product.count = inputValue;
+    product.total = product.count * product.price;
+    addTotals();
+    setLocalStorageCount(id, product.count);
+    setLocalStorageTotal(id, product.total);
+    if (isNaN(product.count)) {
+      product.count = 0;
+      product.total = product.count * product.price;
+      addTotals();
+      setLocalStorageCount(id, product.count);
+      setLocalStorageTotal(id, product.total);
+    }
   };
 
   const decrement = (id) => {
     let tempCart = [...cart];
-    const selectedProduct = tempCart.find((item) => item.id === id);
-    const index = tempCart.indexOf(selectedProduct);
+    const index = tempCart.findIndex((item) => item.id === id);
     const product = tempCart[index];
     product.count = product.count - 1;
-    if (product.count === 0) {
+    setLocalStorageCount(id, product.count);
+    setLocalStorageTotal(id, product.total);
+    if (product.count < 1) {
+      removeLocalStorageItem(id);
       removeItem(id);
     } else {
       product.total = product.count * product.price;
+      setLocalStorageTotal(id, product.total);
       setCart(tempCart);
       addTotals();
     }
@@ -89,6 +119,7 @@ function ProductProvider({ children }) {
     removedProduct.inCart = false;
     removedProduct.count = 0;
     removedProduct.total = 0;
+    removeLocalStorageItem(id);
     setCart(tempCart);
     setProducts(tempProducts);
     addTotals();
@@ -108,12 +139,14 @@ function ProductProvider({ children }) {
       });
       return tempProducts;
     });
+    removeAllLocalStorageItem();
   };
   useEffect(() => {
     addTotals();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
+  
   return (
     <ProductContext.Provider
       value={{
@@ -135,6 +168,8 @@ function ProductProvider({ children }) {
         removeItem,
         clearCart,
         setIsAllowed,
+        handleInputChange,
+        
       }}
     >
       {children}

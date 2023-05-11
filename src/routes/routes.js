@@ -12,7 +12,7 @@ import CheckAccess from "./CheckAccess";
 const childrenRoutes = [
   { path: "/", element: <LandingPage /> },
   { path: "/product", element: <ProductList /> },
-  { path: "/details", element: <Details /> },
+  { path: "/details/:id", element: <Details /> },
   { path: "/cart", element: <Cart /> },
   { path: "/comingsoon", element: <ComingSoon /> },
   {
