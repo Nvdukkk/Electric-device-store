@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../../context";
 import PropTypes from "prop-types";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { getLocalStorageIncart } from "../../utils";
+import Image from "../Image";
 
 export default function Product(props) {
   const { id, title, img, price } = props.product;
@@ -15,13 +15,12 @@ export default function Product(props) {
           <div title={title} className="card relative">
             <Link
               to={`/details/${id}`}
-              onClick={() => value.handleDetail(id)}
+              // onClick={() => value.handleDetail(id)}
               className="img-container p-4"
             >
-              <LazyLoadImage
+              <Image 
+                ratio='ratio-1x1'
                 src={img}
-                effect="blur"
-                className="w-100 "
                 alt="product"
               />
             </Link>

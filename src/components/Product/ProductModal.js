@@ -3,6 +3,7 @@ import { ProductConsumer } from "../../context";
 import { ButtonContainer } from "../Button";
 import { Link } from "react-router-dom";
 import ReactModal from "react-modal";
+import Image from "../Image";
 
 
 export default function ProductModal() {
@@ -22,17 +23,14 @@ export default function ProductModal() {
             >
               <div className="container">
                 <div className="row">
-                  <div className=" text-center ">
-                    <img
+                  <div className="text-center ">
+                    <Image
+                      ratio="ratio-1x1"
                       loading="lazy"
                       src={img}
-                      className="img-fluid"
                       alt="product"
-                      style={{
-                        marginBottom: "40px",
-                      }}
                     />
-                    <h5 className="mb-2">{title}</h5>
+                    <h5 className="my-2">{title}</h5>
                     <h5 className="text-muted mb-4">Giá: {price.toLocaleString('vi-VN')} vnđ</h5>
                     <Link to="/product">
                       <ButtonContainer

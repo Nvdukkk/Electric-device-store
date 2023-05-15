@@ -1,6 +1,5 @@
 import React from "react";
 
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function CartItem({ item, value }) {
   const { id, title, img, price, total, count } = item;
@@ -9,7 +8,8 @@ export default function CartItem({ item, value }) {
   return (
     <div className="row my-2 text-center pt-3">
       <div className=" col-4 col-sm-2 col-lg-2 d-flex align-items-center justify-content-center">
-        <LazyLoadImage
+        <img
+          alt={img}
           src={img}
           style={{ width: "5rem", height: "5rem" }}
           effect="blur"

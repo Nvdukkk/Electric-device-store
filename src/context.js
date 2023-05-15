@@ -12,7 +12,6 @@ const ProductContext = createContext();
 
 function ProductProvider({ children }) {
   const [products, setProducts] = useState(storeProducts);
-  const [detailProduct, setDetailProduct] = useState(storeProducts);
   const localStorageValues = getCartItemsValues();
   const [cart, setCart] = useState(localStorageValues);
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,10 +26,7 @@ function ProductProvider({ children }) {
     return product;
   };
 
-  const handleDetail = (id) => {
-    const product = getItem(id);
-    setDetailProduct(product);
-  };
+
 
   const addToCart = (id) => {
     const product = products.find((item) => item.id === id);
@@ -151,7 +147,6 @@ function ProductProvider({ children }) {
     <ProductContext.Provider
       value={{
         products,
-        detailProduct,
         cart,
         modalOpen,
         modalProduct,
@@ -159,7 +154,6 @@ function ProductProvider({ children }) {
         cartDiscount,
         cartTotal,
         isAllowed,
-        handleDetail,
         addToCart,
         openModal,
         closeModal,
