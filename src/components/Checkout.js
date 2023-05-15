@@ -75,6 +75,7 @@ export default function Checkout() {
                         transform: "rotateY(180deg)",
                       }}
                     />
+                    
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-12 ">
@@ -129,6 +130,10 @@ export default function Checkout() {
                               message:
                                 "Vui lòng nhập định dạng số điện thoại 10 số",
                             },
+                            pattern: {
+                              value: /(0[3|5|7|8|9])+([0-9]{8})\b/g,
+                              message: "Vui lòng kiểm tra lại số điện thoại"
+                            }
                           })}
                         />
                         {errors.number && (

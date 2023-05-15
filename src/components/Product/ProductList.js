@@ -70,7 +70,7 @@ export default function ProductList() {
             ))}
           </Slider>
           <div
-            className="row mt-5 border-top border-2 border-dark border-solid border-xl-0"
+            className="row mt-5 border-top border-2 border-dark border-solid gx-4 gx-sm-5 gx-md-4"
             style={{
               minHeight: "50vh",
             }}
