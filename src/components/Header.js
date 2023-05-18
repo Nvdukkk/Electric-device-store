@@ -4,7 +4,10 @@ import { ButtonContainer } from "./Button";
 
 export default function Header() {
   return (
-    <header className="w-100 position-sticky top-0 bg-white z-3">
+    <header
+      className="w-100 position-sticky top-0 bg-white z-3"
+      style={{ boxShadow: "1px 1px 10px rgba(0, 0, 0, 0.15)" }}
+    >
       <nav className="container navbar navbar-expand-sm navbar-dark justify-content-between">
         <Link
           to="/"

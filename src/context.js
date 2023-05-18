@@ -26,8 +26,6 @@ function ProductProvider({ children }) {
     return product;
   };
 
-
-
   const addToCart = (id) => {
     const product = products.find((item) => item.id === id);
     product.inCart = true;
@@ -35,7 +33,6 @@ function ProductProvider({ children }) {
     product.total = product.price * product.count;
     setCart([...cart, product]);
     setLocalStorageItem(id, product);
-    
   };
 
   const addTotals = () => {
@@ -142,7 +139,6 @@ function ProductProvider({ children }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
 
-  
   return (
     <ProductContext.Provider
       value={{
