@@ -8,21 +8,14 @@ import Image from "../Image";
 
 export default function Product(props) {
   const { id, title, img, price } = props.product;
+
   return (
-    <ProductWrapper className="col-6 h-50 col-md-4 h-lg-100 col-lg-3 my-3">
+    <ProductWrapper>
       <ProductConsumer>
         {(value) => (
           <div title={title} className="card relative">
-            <Link
-              to={`/details/${id}`}
-              // onClick={() => value.handleDetail(id)}
-              className="img-container p-4"
-            >
-              <Image 
-                ratio='ratio-1x1'
-                src={img}
-                alt="product"
-              />
+            <Link to={`/details/${id}`} className="img-container p-4">
+              <Image ratio="ratio-1x1" src={img} alt="product" />
             </Link>
             <button
               className="cart-btn"
@@ -49,14 +42,15 @@ export default function Product(props) {
             <Link
               to={`/details/${id}`}
               onClick={() => value.handleDetail(id)}
-              className="card-footer d-flex flex-column align-items-center justify-content-center"
+              className="card-footer text-center d-flex flex-column align-items-center justify-content-center"
             >
               <p
-                className="product-limit-text"
+                className="line-clamp-2"
                 style={{
                   fontSize: "14px",
                   fontWeight: "500",
                   marginBottom: "5px",
+                  height:'6vh'
                 }}
               >
                 {title}
@@ -113,15 +107,17 @@ const ProductWrapper = styled.div`
   .img-container {
     overflow: hidden;
   }
+  .img-container img {
+    transition: all ease 0.3s;
+  }
   .img-container:hover img {
     transform: scale(1.08);
-    transition: all ease 0.3s;
   }
   .cart-btn {
     position: absolute;
-    bottom: 71px;
+    bottom: 85px;
     right: 11px;
-    padding: 0 0.4rem 0.3rem;
+    padding: 1px 4px;
     background: #fff;
     border: 1px solid #000;
     color: black;

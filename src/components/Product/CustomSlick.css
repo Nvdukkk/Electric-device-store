@@ -1,0 +1,42 @@
+.pb-5 .slick-dots li:hover,
+.pb-5 .slick-dots li.slick-active {
+  transform: scale(1.1);
+}
+
+.pb-5 .slick-dots li.slick-active {
+  border: 1px solid black;
+}
+
+#slick-prev-btn {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateX(-10px);
+    cursor: pointer;
+  }
+}
+
+#slick-next-btn {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* Độ rộng của thanh cuộn */
+  height: 7px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Màu nền của vùng track (vùng không có thanh cuộn) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Màu của thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Màu của thanh cuộn khi di chuột qua */
+}
