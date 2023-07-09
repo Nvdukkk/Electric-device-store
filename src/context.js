@@ -1,173 +1,172 @@
-import React, { Component } from 'react';
-import { storeProducts, detailProduct } from './data';
+import React, { createContext, useEffect, useState } from "react";
+import { storeProducts } from "./data";
+import {
+  getCartItemsValues,
+  removeAllLocalStorageItem,
+  removeLocalStorageItem,
+  setLocalStorageCount,
+  setLocalStorageItem,
+  setLocalStorageTotal,
+} from "./utils";
+const ProductContext = createContext();
 
-const ProductContext = React.createContext();
-// Provider
-// Consumer
+function ProductProvider({ children }) {
+  const [products, setProducts] = useState(storeProducts);
+  const localStorageValues = getCartItemsValues();
+  const [cart, setCart] = useState(localStorageValues);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalProduct, setModalProduct] = useState(storeProducts);
+  const [cartSubTotal, setCartSubTotal] = useState(0);
+  const [cartDiscount, setCartDiscount] = useState(0);
+  const [cartTotal, setCartTotal] = useState(0);
+  const [isAllowed, setIsAllowed] = useState(false);
 
-class ProductProvider extends Component {
-  state = {
-    products: [],
-    detailProduct: detailProduct,
-    cart: [],
-    modalOpen: false,
-    modalProduct: detailProduct,
-    cartSubTotal: 0,
-    cartTax: 0,
-    cartTotal: 0
-  }
-  componentDidMount() {
-    this.setProducts();
-  }
-
-  setProducts = () => {
-    let tempProducts = [];
-    storeProducts.forEach(item => {
-      const singleItem = { ...item };
-      tempProducts = [...tempProducts, singleItem];
-    })
-    this.setState(() => {
-      return { products: tempProducts };
-    })
-  }
-
-  getItem = (id) => {
-    const product = this.state.products.find(item => item.id === id);
+  const getItem = (id) => {
+    const product = products.find((item) => item.id === id);
     return product;
-  }
+  };
 
-
-  handleDetail = (id) => {
-    const product = this.getItem(id);
-    this.setState(() => {
-      return { detailProduct: product }
-    })
-  }
-  addToCart = (id) => {
-    let tempProducts = [...this.state.products];
-    const index = tempProducts.indexOf(this.getItem(id));
-    const product = tempProducts[index];
+  const addToCart = (id) => {
+    const product = products.find((item) => item.id === id);
     product.inCart = true;
     product.count = 1;
-    const price = product.price;
-    product.total = price;
-    this.setState(() => {
-      return {
-        products: tempProducts,
-        cart: [...this.state.cart, product],
-      }
-    }, () => {
-      this.addTotals();
-    })
-  }
+    product.total = product.price * product.count;
+    setCart([...cart, product]);
+    setLocalStorageItem(id, product);
+  };
 
-  openModal = id => {
-    const product = this.getItem(id);
-    this.setState(() => {
-      return { modalProduct: product, modalOpen: true }
-    })
-  }
+  const addTotals = () => {
+    const subTotal = cart.reduce((total, item) => total + item.total, 0);
+    const discount = parseFloat(subTotal * 0.1);
+    const total = subTotal - discount;
+    setCartSubTotal(subTotal.toLocaleString("vi-VN"));
+    setCartDiscount(discount.toLocaleString("vi-VN"));
+    setCartTotal(total.toLocaleString("vi-VN"));
+  };
 
-  closeModal = () => {
-    this.setState(() => {
-      return { modalOpen: false }
-    })
-  }
+  const openModal = (id) => {
+    const product = getItem(id);
+    setModalProduct(product);
+    setModalOpen(true);
+  };
 
-  increment = (id) => {
-    let tempCart = [...this.state.cart];
-    const selectedProduct = tempCart.find(item => item.id === id);
-    const index = tempCart.indexOf(selectedProduct);
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const increment = (id) => {
+    let tempCart = [...cart];
+    const index = tempCart.findIndex((item) => item.id === id);
     const product = tempCart[index];
     product.count = product.count + 1;
     product.total = product.count * product.price;
-    this.setState(() => { return { cart: [...tempCart] } }, () => { this.addTotals() })
+    setCart(tempCart);
+    addTotals();
+    setLocalStorageCount(id, product.count);
+    setLocalStorageTotal(id, product.total);
+  };
 
-  }
+  const handleInputChange = (e, id) => {
+    let tempCart = [...cart];
+    const index = tempCart.findIndex((item) => item.id === id);
+    const product = tempCart[index];
+    const inputValue = parseInt(e.target?.value);
+    product.count = inputValue;
+    product.total = product.count * product.price;
+    addTotals();
+    setLocalStorageCount(id, product.count);
+    setLocalStorageTotal(id, product.total);
+    if (isNaN(product.count)) {
+      product.count = 0;
+      product.total = product.count * product.price;
+      addTotals();
+      setLocalStorageCount(id, product.count);
+      setLocalStorageTotal(id, product.total);
+    }
+  };
 
-  decrement = (id) => {
-    let tempCart = [...this.state.cart];
-    const selectedProduct = tempCart.find(item => item.id === id);
-    const index = tempCart.indexOf(selectedProduct);
+  const decrement = (id) => {
+    let tempCart = [...cart];
+    const index = tempCart.findIndex((item) => item.id === id);
     const product = tempCart[index];
     product.count = product.count - 1;
-    if (product.count === 0) {
-      this.removeItem(id);
+    setLocalStorageCount(id, product.count);
+    setLocalStorageTotal(id, product.total);
+    if (product.count < 1) {
+      removeLocalStorageItem(id);
+      removeItem(id);
     } else {
       product.total = product.count * product.price;
-      this.setState(
-        () => {
-          return { cart: [...tempCart] };
-        },
-        () => {
-          this.addTotals(); 
-        }
-      )
+      setLocalStorageTotal(id, product.total);
+      setCart(tempCart);
+      addTotals();
     }
-  }
+  };
 
-  removeItem = (id) => {
-    let tempProducts = [...this.state.products];
-    let tempCart = [...this.state.cart];
-    tempCart = tempCart.filter(item => item.id !== id);
-    const index = tempProducts.indexOf(this.getItem(id));
+  const removeItem = (id) => {
+    let tempProducts = [...products];
+    let tempCart = [...cart];
+    tempCart = tempCart.filter((item) => item.id !== id);
+    const index = tempProducts.indexOf(getItem(id));
     let removedProduct = tempProducts[index];
     removedProduct.inCart = false;
     removedProduct.count = 0;
     removedProduct.total = 0;
-    this.setState(() => {
-      return {
-        cart: [...tempCart],
-        products: [...tempProducts]
-      }
-    }, () => {
-      this.addTotals();
-    })
-  }
+    removeLocalStorageItem(id);
+    setCart(tempCart);
+    setProducts(tempProducts);
+    addTotals();
+  };
 
-  clearCart = () => {
-    this.setState(() => {
-      return { cart: [] };
-    }, () => {
-      this.setProducts();
-      this.addTotals();
+  const clearCart = () => {
+    let tempCart = [...cart];
+    tempCart.forEach((item) => {
+      item.inCart = false;
     });
-  }
+    setCart([]);
+    setProducts(() => {
+      let tempProducts = [];
+      storeProducts.forEach((item) => {
+        const singleItem = { ...item };
+        tempProducts = [...tempProducts, singleItem];
+      });
+      return tempProducts;
+    });
+    removeAllLocalStorageItem();
+  };
+  useEffect(() => {
+    addTotals();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cart]);
 
-  addTotals = () => {
-    let subTotal = 0;
-    this.state.cart.map(item => (subTotal += item.total));
-    const tempTax = subTotal * 0.1;
-    const tax = parseFloat(tempTax.toFixed(2));
-    const total = subTotal + tax;
-    this.setState(() => {
-      return {
-        cartSubTotal: subTotal,
-        cartTax: tax,
-        cartTotal: total
-      }
-    })
-  }
-
-  render() {
-    return (
-      <ProductContext.Provider value={{
-        ...this.state,
-        handleDetail: this.handleDetail,
-        addToCart: this.addToCart,
-        openModal: this.openModal,
-        closeModal: this.closeModal,
-        increment: this.increment,
-        decrement: this.decrement,
-        removeItem: this.removeItem,
-        clearCart: this.clearCart
-      }}>
-        {this.props.children}
-      </ProductContext.Provider>
-    )
-  }
+  return (
+    <ProductContext.Provider
+      value={{
+        products,
+        cart,
+        modalOpen,
+        modalProduct,
+        cartSubTotal,
+        cartDiscount,
+        cartTotal,
+        isAllowed,
+        addToCart,
+        openModal,
+        closeModal,
+        increment,
+        decrement,
+        removeItem,
+        clearCart,
+        setIsAllowed,
+        handleInputChange,
+        
+      }}
+    >
+      {children}
+    </ProductContext.Provider>
+  );
 }
 
 const ProductConsumer = ProductContext.Consumer;
 
-export { ProductProvider, ProductConsumer };
+export { ProductProvider, ProductConsumer, ProductContext };

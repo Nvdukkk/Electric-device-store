@@ -2,25 +2,25 @@ import React from "react";
 
 export default function CartColumns() {
   return (
-    <div className="container-fluid text-center d-none d-lg-block">
+    <div className="container text-center d-none d-lg-block mt-5 border-bottom">
       <div className="row">
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="">Hình ảnh</p>
+        <div className="col-10 mx-auto col-lg-2 font-weight-bold">
+          <p>Hình ảnh</p>
         </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="">Tên sản phẩm</p>
+        <div className="col-10 mx-auto col-lg-2 font-weight-bold">
+          <p>Tên sản phẩm</p>
         </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="">Giá</p>
+        <div className="col-10 mx-auto col-lg-2 font-weight-bold">
+          <p>Giá</p>
         </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="">Số lượng</p>
+        <div className="col-10 mx-auto col-lg-2 font-weight-bold">
+          <p>Số lượng</p>
         </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="">Xóa</p>
+        <div className="col-10 mx-auto col-lg-2 font-weight-bold">
+          <p>Xóa</p>
         </div>
-        <div className="col-10 mx-auto col-lg-2">
-          <p className="">Tổng</p>
+        <div className="col-10 mx-auto col-lg-2 font-weight-bold">
+          <p>Tổng</p>
         </div>
       </div>
     </div>
