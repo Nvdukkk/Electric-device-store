@@ -1,20 +1,31 @@
+import Home from "../page";
+import Cart from "../page/cart/Cart";
+import ProductList from "../page/product/Product";
+import Details from "../page/details/Details";
+import NotFound from "../page/404/NotFound";
+import ComingSoon from "../page/coming-soon/ComingSoon";
+import Login from "../page/login/Login";
+import Register from "../page/register/Register";
+import Setting from "../page/setting/Setting";
+
 import React from "react";
-import ProductList from "../components/Product/ProductList";
-import Details from "../components/Product/Details";
-import Cart from "../components/Cart/Cart";
-import NotFound from "../components/NotFound";
-import LandingPage from "../components/Landing Page/LandingPage";
-import ComingSoon from "../components/ComingSoon";
-import DefaultLayout from "../components/DefaultLayout";
 import { useRoutes } from "react-router-dom";
 import CheckAccess from "./CheckAccess";
 
-const childrenRoutes = [
-  { path: "/", element: <LandingPage /> },
+import DefaultLayout from "../layout/DefaultLayout";
+import FullBackgroundLayout from "../layout/FullBackgroundLayout";
+
+const defaultChildren = [
+  { path: "/", element: <Home /> },
   { path: "/product", element: <ProductList /> },
   { path: "/details/:id", element: <Details /> },
   { path: "/cart", element: <Cart /> },
+  { path: "/setting", element: <Setting /> },
+];
+const fullBackGroundChildren = [
   { path: "/comingsoon", element: <ComingSoon /> },
+  { path: "/login", element: <Login /> },
+  { path: "/register", element: <Register /> },
   {
     path: "/checkout",
     element: <CheckAccess path="/checkout" />,
@@ -23,11 +34,12 @@ const childrenRoutes = [
     path: "/order-success",
     element: <CheckAccess path="/order-success" />,
   },
+
   { path: "*", element: <NotFound /> },
 ];
-
 const routes = [
-  { path: "/", element: <DefaultLayout />, children: childrenRoutes },
+  { element: <DefaultLayout />, children: defaultChildren },
+  { element: <FullBackgroundLayout />, children: fullBackGroundChildren },
 ];
 
 const AppRoutes = () => useRoutes(routes);

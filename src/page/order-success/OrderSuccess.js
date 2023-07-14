@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonContainer } from "./Button";
+import { ButtonContainer } from "../../components/Button";
 import { Link } from "react-router-dom";
 
 function OrderSuccess() {
