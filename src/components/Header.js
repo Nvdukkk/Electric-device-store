@@ -40,7 +40,7 @@ export default function Header() {
               />
             </ButtonContainer>
           </Link>
-          <Link to="/login" title="Người dùng">
+          {/* <Link to="/login" title="Người dùng">
             <ButtonContainer>
               <i
                 className=" fas fa-user"
@@ -55,7 +55,7 @@ export default function Header() {
                 style={{ width: "18px", height: "18px" }}
               />
             </ButtonContainer>
-          </Link>
+          </Link> */}
         </div>
       </nav>
     </header>
