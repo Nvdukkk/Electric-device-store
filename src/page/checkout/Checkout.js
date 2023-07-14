@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { ProductConsumer, ProductContext } from "../context";
+import { ProductConsumer, ProductContext } from "../../context";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
@@ -50,7 +50,7 @@ export default function Checkout() {
           <div
             className="d-flex justify-content-center align-items-center w-100"
             style={{
-              minHeight: "89.6vh",
+              minHeight: "100vh",
               backgroundImage: 'url("../image/checkout-background.webp")',
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -75,7 +75,6 @@ export default function Checkout() {
                         transform: "rotateY(180deg)",
                       }}
                     />
-                    
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-12 ">
@@ -132,8 +131,8 @@ export default function Checkout() {
                             },
                             pattern: {
                               value: /(0[3|5|7|8|9])+([0-9]{8})\b/g,
-                              message: "Vui lòng kiểm tra lại số điện thoại"
-                            }
+                              message: "Vui lòng kiểm tra lại số điện thoại",
+                            },
                           })}
                         />
                         {errors.number && (

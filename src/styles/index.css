@@ -140,11 +140,11 @@ a {
 }
 
 /* coming soon */
-
 .comingsoon {
   background: url("/image/cover.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
+  min-height: 100vh;
 }
 .comingsoon_body {
   margin: 100px 0;
@@ -160,7 +160,6 @@ a {
 }
 
 /* 404 css */
-
 .background_404 {
   background: linear-gradient(#0c0e10, #446182);
 }
@@ -396,6 +395,9 @@ a {
   .text-title {
     letter-spacing: 0.3rem;
   }
+  .w-mw767-100{
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -405,6 +407,7 @@ a {
   .fs-sm-12px {
     font-size: 12px;
   }
+  
 }
 
 @media (max-width: 280px) {
