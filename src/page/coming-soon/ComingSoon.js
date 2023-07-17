@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { ButtonContainer } from "./Button";
+import { ButtonContainer } from "../../components/Button";
 
 function ComingSoon() {
   return (
@@ -31,7 +31,7 @@ function ComingSoon() {
         <div className="p-5">
           Copyright © 2022 by
           <span className="text-primary"> Thiên Ân Co., Ltd. </span>
-           All rights reserved
+          All rights reserved
         </div>
       </div>
     </div>

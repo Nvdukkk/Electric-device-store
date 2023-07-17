@@ -1,6 +1,32 @@
-import { GUEST_LIST } from "./constant";
 import React from "react";
 import Slider from "react-slick";
+
+const GUEST_LIST = [
+  {
+    id: 1,
+    src: "/guest image/logo-cadisun.png",
+  },
+  {
+    id: 2,
+    src: "/guest image/logo-lsvinaa.png",
+  },
+  {
+    id: 3,
+    src: "/guest image/logo-rang-dong.png",
+  },
+  {
+    id: 4,
+    src: "/guest image/logo-vivc.png",
+  },
+  {
+    id: 5,
+    src: "/guest image/logo-cadivi.png",
+  },
+  {
+    id: 6,
+    src: "/guest image/logo-datxanh.png",
+  },
+];
 
 function GuestList() {
   const settingSlider = {

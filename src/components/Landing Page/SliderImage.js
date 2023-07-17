@@ -1,8 +1,25 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import Slider from "react-slick";
-import { BANNER_SLIDER } from "./constant";
 import Image from "../Image";
+ 
+const BANNER_SLIDER = [
+  {
+    title: 'ĐẠI LÝ PHÂN PHỐI',
+    content: 'Top 1 Việt Nam',
+    img: '/image/banner-slide-1.jpg',
+  },
+  {
+    title: 'ĐA DẠNG CHỦNG LOẠI',
+    content: 'Đầy đủ thương hiệu',
+    img: '/image/banner-slide-2.jpg',
+  },
+  {
+    title: 'NHÀ THẦU UY TÍN',
+    content: 'Hơn 10 năm kinh nghiệm',
+    img: '/image/banner-slide-3.jpg',
+  },
+]
 
 function SliderImage() {
   const settingSlider = {
@@ -15,7 +32,6 @@ function SliderImage() {
     cssEase: "linear",
     arrows: false,
     pauseOnHover: false,
-    
   };
   return (
     <div id="slider">
@@ -24,9 +40,7 @@ function SliderImage() {
           <div key={index} className="position-relative">
             <Image src={item.img} />
             <div className="position-absolute top-50 start-50 translate-middle text-white text-center glow">
-              <h1 className="fs-45 ">
-                {item.title}
-              </h1>
+              <h1 className="fs-45 ">{item.title}</h1>
               <p className="mt-4">{item.content}</p>
 
               <Link
