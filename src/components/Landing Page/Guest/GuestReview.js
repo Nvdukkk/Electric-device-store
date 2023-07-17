@@ -53,6 +53,7 @@ function GuestReview() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
+    pauseOnHover: false,
     dots: true,
     fade: true,
     cssEase: "linear",

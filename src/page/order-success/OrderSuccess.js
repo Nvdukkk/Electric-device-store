@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonContainer } from "../../components/Button";
+import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 
 function OrderSuccess() {
@@ -39,14 +39,14 @@ function OrderSuccess() {
           </p>
           <div>
             <Link to="/">
-              <ButtonContainer className="w-mw768-75">
+              <Button className="w-mw768-75">
                 <i className="fas fa-home"></i>Trở về trang chủ
-              </ButtonContainer>
+              </Button>
             </Link>
             <Link to="/product">
-              <ButtonContainer cart className="w-mw768-75">
+              <Button cart className="w-mw768-75">
                 Mua thêm sản phẩm
-              </ButtonContainer>
+              </Button>
             </Link>
           </div>
         </div>
