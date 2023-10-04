@@ -26,7 +26,7 @@ export default function Checkout() {
     const mergeData = Object.assign({}, inputData, cartData);
 
     axios.post(
-      "https://sheet.best/api/sheets/eb5ec9af-83b0-431b-8f6d-75ba9973d95a",
+      "https://sheet.best/api/sheets/05109e90-cb9f-4ed3-ab12-b3ab4af760ad",
       mergeData
     );
     context.clearCart();

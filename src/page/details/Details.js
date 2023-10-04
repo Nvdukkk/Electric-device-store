@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ButtonContainer } from "../../components/Button";
+import Button from "../../components/Button";
 import { getLocalStorageIncart } from "../../utils";
 import { useParams } from "react-router-dom";
 import { storeProducts } from "../../data";
@@ -51,17 +51,15 @@ export default function Detail() {
           </p>
           <div className="text-start">
             <Link to="/product">
-              <ButtonContainer className="w-mw992-100">
-                Xem thêm sản phẩm
-              </ButtonContainer>
+              <Button className="w-mw992-100">Xem thêm sản phẩm</Button>
             </Link>
             <Link to="/cart">
               {getLocalStorageIncart(product?.id) ? (
-                <ButtonContainer cart className="w-mw992-100">
+                <Button cart className="w-mw992-100">
                   Đã có trong giỏ hàng
-                </ButtonContainer>
+                </Button>
               ) : (
-                <ButtonContainer
+                <Button
                   className="w-mw992-100"
                   cart
                   onClick={() => {
@@ -69,7 +67,7 @@ export default function Detail() {
                   }}
                 >
                   Thêm vào giỏ hàng
-                </ButtonContainer>
+                </Button>
               )}
             </Link>
           </div>

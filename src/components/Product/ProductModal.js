@@ -1,10 +1,9 @@
 import React from "react";
 import { ProductConsumer } from "../../context";
-import { ButtonContainer } from "../Button";
+import Button from "../Button";
 import { Link } from "react-router-dom";
 import ReactModal from "react-modal";
 import Image from "../Image";
-
 
 export default function ProductModal() {
   return (
@@ -31,17 +30,19 @@ export default function ProductModal() {
                       alt="product"
                     />
                     <h5 className="my-2">{title}</h5>
-                    <h5 className="text-muted mb-4">Giá: {price.toLocaleString('vi-VN')} vnđ</h5>
+                    <h5 className="text-muted mb-4">
+                      Giá: {price.toLocaleString("vi-VN")} vnđ
+                    </h5>
                     <Link to="/product">
-                      <ButtonContainer
+                      <Button
                         className="w-mw992-100"
                         onClick={() => closeModal()}
                       >
                         Quay lại cửa hàng
-                      </ButtonContainer>
+                      </Button>
                     </Link>
                     <Link to="/cart">
-                      <ButtonContainer
+                      <Button
                         className="w-mw992-100"
                         cart
                         onClick={() => {
@@ -50,7 +51,7 @@ export default function ProductModal() {
                         }}
                       >
                         Thêm vào giỏ hàng
-                      </ButtonContainer>
+                      </Button>
                     </Link>
                   </div>
                 </div>

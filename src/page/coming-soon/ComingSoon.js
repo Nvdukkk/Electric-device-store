@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { ButtonContainer } from "../../components/Button";
+import Button from "../../components/Button";
 
 function ComingSoon() {
   return (
@@ -26,7 +26,7 @@ function ComingSoon() {
         <div className="comingsoon_body">
           <h1 className="text-uppercase">Cuộc phiêu lưu đã bắt đầu</h1>
           <p>Chúng tôi đang cập nhật thêm nhiều nội dung mới...</p>
-          <ButtonContainer>Nhận thông báo</ButtonContainer>
+          <Button>Nhận thông báo</Button>
         </div>
         <div className="p-5">
           Copyright © 2022 by

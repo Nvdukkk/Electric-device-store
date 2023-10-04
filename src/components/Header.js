@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ButtonContainer } from "./Button";
+import Button from "./Button";
 
 export default function Header() {
   return (
@@ -24,37 +24,37 @@ export default function Header() {
         </Link>
         <div>
           <Link to="/product" title="Cửa hàng">
-            <ButtonContainer>
+            <Button>
               <i
                 className="fab fa-shopify me-0 me-sm-2"
                 style={{ width: "18px", height: "18px" }}
               />
               <span className="d-none d-sm-inline">Cửa hàng</span>
-            </ButtonContainer>
+            </Button>
           </Link>
           <Link to="/cart" title="Giỏ hàng">
-            <ButtonContainer>
+            <Button>
               <i
                 className=" fas fa-cart-plus"
                 style={{ width: "18px", height: "18px" }}
               />
-            </ButtonContainer>
+            </Button>
           </Link>
           {/* <Link to="/login" title="Người dùng">
-            <ButtonContainer>
+            <Button>
               <i
                 className=" fas fa-user"
                 style={{ width: "18px", height: "18px" }}
               />
-            </ButtonContainer>
+            </Button>
           </Link>
           <Link to="/setting" title="Cấu hình">
-            <ButtonContainer>
+            <Button>
               <i
                 className=" fas fa-gear"
                 style={{ width: "18px", height: "18px" }}
               />
-            </ButtonContainer>
+            </Button>
           </Link> */}
         </div>
       </nav>
